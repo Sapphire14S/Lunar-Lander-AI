@@ -1,0 +1,965 @@
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python train_agent_v3.py --train --filename policy_v3.npy
+======================================================================
+PPO Agent v3 — LunarLander-v3  (targeting avg 300+)
+  Hidden size   : 256  |  Actor params: 70,148
+  LR schedule   : linear 3e-04 → 1e-05 over 5M steps
+  Entropy       : annealed 0.01 → 0.001
+  N_STEPS       : 8192  |  Batch: 256  |  K_epochs: 10
+  Clip ε        : 0.15  |  Gamma: 0.99
+  Budget        : 5,000,000 steps
+  Solve target  : greedy avg 325
+  Saving to     : policy_v3.npy  (best_policy.npy untouched)
+======================================================================
+Ep    20 | Steps     1768 | Reward  -248.09 | Avg(100): -167.97 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 78.9m
+Ep    40 | Steps     3561 | Reward  -109.93 | Avg(100): -187.13 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 78.0m
+Ep    60 | Steps     5511 | Reward  -205.24 | Avg(100): -181.87 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 77.2m
+Ep    80 | Steps     7369 | Reward   -99.11 | Avg(100): -175.21 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 76.8m
+Ep   100 | Steps     9342 | Reward   -41.73 | Avg(100): -170.84 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 99.1m
+Ep   120 | Steps    11118 | Reward  -164.38 | Avg(100): -163.15 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 95.2m
+Ep   140 | Steps    12766 | Reward   -95.03 | Avg(100): -149.76 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 92.9m
+Ep   160 | Steps    15503 | Reward    -4.55 | Avg(100): -141.70 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 92.9m
+Ep   180 | Steps    17491 | Reward  -112.25 | Avg(100): -134.30 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 103.2m
+Ep   200 | Steps    19442 | Reward   -50.14 | Avg(100): -129.20 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 100.3m
+Ep   220 | Steps    21362 | Reward  -124.55 | Avg(100): -124.76 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 97.8m
+Ep   240 | Steps    23232 | Reward  -168.17 | Avg(100): -117.82 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 96.2m
+Ep   260 | Steps    25180 | Reward   -66.44 | Avg(100): -109.38 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 103.1m
+Ep   280 | Steps    27167 | Reward   -92.73 | Avg(100): -100.56 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 101.1m
+Ep   300 | Steps    29253 | Reward   -47.20 | Avg(100):  -90.82 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 99.2m
+Ep   320 | Steps    31426 | Reward   -57.96 | Avg(100):  -82.75 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0100 | ETA: 97.6m
+Ep   340 | Steps    33459 | Reward   -38.37 | Avg(100):  -75.02 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 104.2m
+Ep   360 | Steps    35653 | Reward   -36.80 | Avg(100):  -69.51 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 105.6m
+Ep   380 | Steps    38118 | Reward   -39.07 | Avg(100):  -67.04 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 108.7m
+Ep   400 | Steps    40361 | Reward  -104.60 | Avg(100):  -62.18 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 112.7m
+Ep   420 | Steps    42726 | Reward   -70.01 | Avg(100):  -62.03 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 121.5m
+Ep   440 | Steps    44975 | Reward   -81.38 | Avg(100):  -58.21 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 122.3m
+Ep   460 | Steps    47374 | Reward   -70.56 | Avg(100):  -56.25 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 122.9m
+Ep   480 | Steps    49963 | Reward   -40.85 | Avg(100):  -54.63 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 129.8m
+Ep   500 | Steps    52907 | Reward   -15.87 | Avg(100):  -51.45 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 130.0m
+Ep   520 | Steps    55479 | Reward   -54.44 | Avg(100):  -46.26 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 130.1m
+Ep   540 | Steps    58334 | Reward   -60.24 | Avg(100):  -49.54 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 135.8m
+Ep   560 | Steps    61662 | Reward   -66.43 | Avg(100):  -47.59 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 135.2m
+Ep   580 | Steps    64806 | Reward   -38.92 | Avg(100):  -44.97 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 135.3m
+Ep   600 | Steps    71503 | Reward   -76.69 | Avg(100):  -42.80 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 144.0m
+Ep   620 | Steps    76150 | Reward    24.84 | Avg(100):  -49.69 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 149.0m
+Ep   640 | Steps    83937 | Reward   -53.87 | Avg(100):  -45.54 | Best:    -inf | LR: 3.0e-04 | Ent: 0.0099 | ETA: 156.1m
+Ep   660 | Steps    95231 | Reward  -104.02 | Avg(100):  -39.30 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0098 | ETA: 161.9m
+Ep   680 | Steps   105663 | Reward  -113.73 | Avg(100):  -33.13 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0098 | ETA: 169.9m
+Ep   700 | Steps   116333 | Reward    61.28 | Avg(100):  -31.02 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0098 | ETA: 178.3m
+Ep   720 | Steps   130288 | Reward    50.02 | Avg(100):  -16.01 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0098 | ETA: 184.3m
+Ep   740 | Steps   144903 | Reward    25.47 | Avg(100):   -5.55 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0097 | ETA: 184.1m
+Ep   760 | Steps   157496 | Reward    70.89 | Avg(100):   -0.04 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0097 | ETA: 188.1m
+Ep   780 | Steps   172997 | Reward   -47.20 | Avg(100):    6.70 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0097 | ETA: 190.2m
+Ep   800 | Steps   191169 | Reward   117.81 | Avg(100):   24.20 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0097 | ETA: 191.3m
+Ep   820 | Steps   206245 | Reward    67.99 | Avg(100):   31.60 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0096 | ETA: 194.4m
+Ep   840 | Steps   223285 | Reward   106.21 | Avg(100):   43.27 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0096 | ETA: 197.7m
+Ep   860 | Steps   241492 | Reward   122.68 | Avg(100):   55.44 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0096 | ETA: 199.7m
+Ep   880 | Steps   257537 | Reward    98.73 | Avg(100):   62.35 | Best:    -inf | LR: 2.9e-04 | Ent: 0.0095 | ETA: 201.7m
+Ep   900 | Steps   275586 | Reward   120.60 | Avg(100):   64.67 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0095 | ETA: 200.3m
+Ep   920 | Steps   293132 | Reward   120.19 | Avg(100):   71.12 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0095 | ETA: 201.7m
+Ep   940 | Steps   311639 | Reward    98.15 | Avg(100):   73.82 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0094 | ETA: 203.9m
+Ep   960 | Steps   330439 | Reward   127.92 | Avg(100):   76.19 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0094 | ETA: 204.2m
+Ep   980 | Steps   348568 | Reward    78.87 | Avg(100):   80.33 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0094 | ETA: 203.5m
+Ep  1000 | Steps   368568 | Reward    94.72 | Avg(100):   83.42 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0094 | ETA: 201.8m
+Ep  1020 | Steps   387929 | Reward   117.51 | Avg(100):   88.43 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0093 | ETA: 199.2m
+Ep  1040 | Steps   406560 | Reward   112.45 | Avg(100):   91.71 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0093 | ETA: 199.2m
+Ep  1060 | Steps   426560 | Reward   109.88 | Avg(100):   97.25 | Best:    -inf | LR: 2.8e-04 | Ent: 0.0092 | ETA: 197.9m
+Ep  1080 | Steps   446560 | Reward   145.55 | Avg(100):  104.73 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0092 | ETA: 198.4m
+Ep  1100 | Steps   466560 | Reward    87.49 | Avg(100):  108.50 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0092 | ETA: 198.1m
+Ep  1120 | Steps   486560 | Reward   147.17 | Avg(100):  112.64 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0091 | ETA: 199.2m
+Ep  1140 | Steps   506560 | Reward   126.50 | Avg(100):  117.17 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0091 | ETA: 196.8m
+Ep  1160 | Steps   526113 | Reward   148.36 | Avg(100):  116.56 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0091 | ETA: 197.3m
+Ep  1180 | Steps   541798 | Reward   258.08 | Avg(100):  127.61 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0090 | ETA: 195.3m
+Ep  1200 | Steps   554889 | Reward   212.90 | Avg(100):  140.78 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0090 | ETA: 193.3m
+Ep  1220 | Steps   564381 | Reward   115.77 | Avg(100):  164.29 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0090 | ETA: 191.8m
+Ep  1240 | Steps   575323 | Reward   248.31 | Avg(100):  180.78 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0090 | ETA: 190.3m
+Ep  1260 | Steps   584203 | Reward   252.66 | Avg(100):  193.95 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0090 | ETA: 188.9m
+Ep  1280 | Steps   592770 | Reward   271.62 | Avg(100):  204.44 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0089 | ETA: 187.6m
+Ep  1300 | Steps   602043 | Reward    21.92 | Avg(100):  204.83 | Best:    -inf | LR: 2.7e-04 | Ent: 0.0089 | ETA: 186.3m
+Ep  1320 | Steps   609814 | Reward   172.65 | Avg(100):  191.79 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0089 | ETA: 185.2m
+Ep  1340 | Steps   617180 | Reward    -4.78 | Avg(100):  186.68 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0089 | ETA: 184.2m
+Ep  1360 | Steps   626517 | Reward   262.08 | Avg(100):  187.67 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0089 | ETA: 182.9m
+Ep  1380 | Steps   635019 | Reward   253.11 | Avg(100):  177.23 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0089 | ETA: 181.8m
+Ep  1400 | Steps   642924 | Reward   221.27 | Avg(100):  177.35 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 180.7m
+Ep  1420 | Steps   651538 | Reward   231.93 | Avg(100):  175.77 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 179.5m
+Ep  1440 | Steps   657846 | Reward   251.94 | Avg(100):  184.76 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 178.7m
+Ep  1460 | Steps   665686 | Reward   230.28 | Avg(100):  178.94 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 177.7m
+Ep  1480 | Steps   673434 | Reward   -15.84 | Avg(100):  169.91 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 176.8m
+Ep  1500 | Steps   682998 | Reward   250.57 | Avg(100):  168.00 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 175.6m
+Ep  1520 | Steps   690574 | Reward     6.72 | Avg(100):  175.98 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0088 | ETA: 174.7m
+Ep  1540 | Steps   697491 | Reward   220.40 | Avg(100):  166.20 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0087 | ETA: 173.9m
+Ep  1560 | Steps   705742 | Reward   251.02 | Avg(100):  164.39 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0087 | ETA: 173.0m
+Ep  1580 | Steps   713003 | Reward   232.83 | Avg(100):  179.20 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0087 | ETA: 173.1m
+Ep  1600 | Steps   722692 | Reward    62.83 | Avg(100):  184.40 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0087 | ETA: 172.7m
+Ep  1620 | Steps   730265 | Reward   218.35 | Avg(100):  193.15 | Best:    -inf | LR: 2.6e-04 | Ent: 0.0087 | ETA: 172.0m
+  [Greedy eval] 250.30 over 20 eps  (train avg: 202.38 | LR: 2.6e-04 | Ent: 0.0087)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 250.30)
+Ep  1640 | Steps   737996 | Reward   278.71 | Avg(100):  203.27 | Best:  250.30 | LR: 2.6e-04 | Ent: 0.0087 | ETA: 171.6m
+Ep  1660 | Steps   749078 | Reward   262.11 | Avg(100):  214.75 | Best:  250.30 | LR: 2.6e-04 | Ent: 0.0087 | ETA: 170.4m
+Ep  1680 | Steps   755984 | Reward   265.53 | Avg(100):  223.44 | Best:  250.30 | LR: 2.6e-04 | Ent: 0.0086 | ETA: 169.6m
+Ep  1700 | Steps   766201 | Reward    55.79 | Avg(100):  226.18 | Best:  250.30 | LR: 2.6e-04 | Ent: 0.0086 | ETA: 168.5m
+Ep  1720 | Steps   773693 | Reward   125.86 | Avg(100):  224.77 | Best:  250.30 | LR: 2.6e-04 | Ent: 0.0086 | ETA: 167.7m
+  [Greedy eval] 245.04 over 20 eps  (train avg: 229.85 | LR: 2.6e-04 | Ent: 0.0086)
+Ep  1740 | Steps   780762 | Reward   239.89 | Avg(100):  228.56 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0086 | ETA: 167.4m
+Ep  1760 | Steps   787138 | Reward  -193.14 | Avg(100):  232.68 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0086 | ETA: 166.7m
+Ep  1780 | Steps   794266 | Reward   266.14 | Avg(100):  228.04 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0086 | ETA: 165.8m
+Ep  1800 | Steps   801541 | Reward   254.27 | Avg(100):  231.35 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0086 | ETA: 165.1m
+Ep  1820 | Steps   807979 | Reward   244.84 | Avg(100):  234.47 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0086 | ETA: 164.4m
+Ep  1840 | Steps   817399 | Reward   131.07 | Avg(100):  229.17 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 163.5m
+  [Greedy eval] 238.07 over 20 eps  (train avg: 228.51 | LR: 2.5e-04 | Ent: 0.0085)
+Ep  1860 | Steps   825827 | Reward   269.49 | Avg(100):  228.38 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 163.2m
+Ep  1880 | Steps   833533 | Reward    98.35 | Avg(100):  221.49 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 162.5m
+Ep  1900 | Steps   840429 | Reward   256.91 | Avg(100):  225.69 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 161.8m
+Ep  1920 | Steps   846875 | Reward   271.78 | Avg(100):  224.02 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 161.2m
+Ep  1940 | Steps   851877 | Reward   272.74 | Avg(100):  233.52 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 160.5m
+Ep  1960 | Steps   859864 | Reward   240.63 | Avg(100):  225.09 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 159.8m
+  [Greedy eval] 247.79 over 20 eps  (train avg: 226.85 | LR: 2.5e-04 | Ent: 0.0085)
+Ep  1980 | Steps   868190 | Reward   256.96 | Avg(100):  237.57 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0085 | ETA: 159.4m
+Ep  2000 | Steps   874228 | Reward   253.19 | Avg(100):  234.58 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 158.9m
+Ep  2020 | Steps   880313 | Reward   295.61 | Avg(100):  239.06 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 158.4m
+Ep  2040 | Steps   889092 | Reward   289.66 | Avg(100):  233.35 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 157.6m
+Ep  2060 | Steps   894455 | Reward   244.15 | Avg(100):  250.18 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 157.2m
+Ep  2080 | Steps   899911 | Reward   260.49 | Avg(100):  253.29 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 156.5m
+  [Greedy eval] 245.61 over 20 eps  (train avg: 253.09 | LR: 2.5e-04 | Ent: 0.0084)
+Ep  2100 | Steps   907160 | Reward   164.12 | Avg(100):  255.59 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 156.2m
+Ep  2120 | Steps   912822 | Reward   256.52 | Avg(100):  253.85 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0084 | ETA: 155.8m
+Ep  2140 | Steps   921177 | Reward   190.55 | Avg(100):  246.94 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0083 | ETA: 155.1m
+Ep  2160 | Steps   927007 | Reward     9.23 | Avg(100):  240.47 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0083 | ETA: 154.6m
+Ep  2180 | Steps   932645 | Reward   285.69 | Avg(100):  231.07 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0083 | ETA: 154.0m
+Ep  2200 | Steps   941908 | Reward   148.37 | Avg(100):  224.75 | Best:  250.30 | LR: 2.5e-04 | Ent: 0.0083 | ETA: 153.2m
+  [Greedy eval] 249.70 over 20 eps  (train avg: 224.75 | LR: 2.5e-04 | Ent: 0.0083)
+Ep  2220 | Steps   950912 | Reward   149.21 | Avg(100):  216.47 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0083 | ETA: 152.9m
+Ep  2240 | Steps   959968 | Reward   249.47 | Avg(100):  219.48 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0083 | ETA: 152.1m
+Ep  2260 | Steps   966795 | Reward   277.73 | Avg(100):  222.46 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0083 | ETA: 151.6m
+Ep  2280 | Steps   973810 | Reward    -7.19 | Avg(100):  220.63 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0083 | ETA: 150.9m
+Ep  2300 | Steps   980327 | Reward   235.65 | Avg(100):  225.65 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 150.3m
+  [Greedy eval] 243.72 over 20 eps  (train avg: 230.70 | LR: 2.4e-04 | Ent: 0.0082)
+Ep  2320 | Steps   987023 | Reward   278.10 | Avg(100):  231.27 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 150.2m
+Ep  2340 | Steps   993681 | Reward   235.23 | Avg(100):  234.88 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 149.6m
+Ep  2360 | Steps  1003352 | Reward  -137.66 | Avg(100):  227.18 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 148.9m
+Ep  2380 | Steps  1010104 | Reward   287.93 | Avg(100):  236.41 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 148.4m
+Ep  2400 | Steps  1016369 | Reward   296.07 | Avg(100):  239.32 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 147.9m
+Ep  2420 | Steps  1022311 | Reward   269.66 | Avg(100):  240.80 | Best:  250.30 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 147.4m
+  [Greedy eval] 265.32 over 20 eps  (train avg: 242.20 | LR: 2.4e-04 | Ent: 0.0082)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 265.32)
+Ep  2440 | Steps  1028921 | Reward   296.14 | Avg(100):  246.68 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0082 | ETA: 147.1m
+Ep  2460 | Steps  1035416 | Reward   137.91 | Avg(100):  253.36 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 146.6m
+Ep  2480 | Steps  1040924 | Reward   261.20 | Avg(100):  253.90 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 146.3m
+Ep  2500 | Steps  1047737 | Reward   287.70 | Avg(100):  253.58 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 145.6m
+Ep  2520 | Steps  1052972 | Reward   278.32 | Avg(100):  257.72 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 145.2m
+Ep  2540 | Steps  1059542 | Reward   236.91 | Avg(100):  252.97 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 144.8m
+Ep  2560 | Steps  1064554 | Reward   268.85 | Avg(100):  258.14 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 144.3m
+  [Greedy eval] 252.06 over 20 eps  (train avg: 258.14 | LR: 2.4e-04 | Ent: 0.0081)
+Ep  2580 | Steps  1070151 | Reward   247.64 | Avg(100):  258.54 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 144.2m
+Ep  2600 | Steps  1075124 | Reward   272.44 | Avg(100):  259.11 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 143.8m
+Ep  2620 | Steps  1081432 | Reward   281.98 | Avg(100):  255.51 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 143.4m
+Ep  2640 | Steps  1086426 | Reward   276.21 | Avg(100):  262.03 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0081 | ETA: 142.9m
+Ep  2660 | Steps  1090971 | Reward   277.45 | Avg(100):  261.09 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0080 | ETA: 142.6m
+Ep  2680 | Steps  1095995 | Reward   279.60 | Avg(100):  262.65 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0080 | ETA: 142.1m
+Ep  2700 | Steps  1101154 | Reward   242.34 | Avg(100):  264.46 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0080 | ETA: 141.8m
+  [Greedy eval] 256.57 over 20 eps  (train avg: 267.42 | LR: 2.4e-04 | Ent: 0.0080)
+Ep  2720 | Steps  1106524 | Reward   274.89 | Avg(100):  268.12 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0080 | ETA: 141.6m
+Ep  2740 | Steps  1112972 | Reward   247.09 | Avg(100):  260.83 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0080 | ETA: 141.1m
+Ep  2760 | Steps  1118071 | Reward   299.34 | Avg(100):  261.09 | Best:  265.32 | LR: 2.4e-04 | Ent: 0.0080 | ETA: 140.7m
+Ep  2780 | Steps  1122868 | Reward   299.08 | Avg(100):  260.66 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0080 | ETA: 140.4m
+Ep  2800 | Steps  1128662 | Reward   270.77 | Avg(100):  254.55 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0080 | ETA: 139.9m
+Ep  2820 | Steps  1134103 | Reward   265.67 | Avg(100):  250.47 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0080 | ETA: 139.6m
+Ep  2840 | Steps  1140176 | Reward   295.81 | Avg(100):  253.63 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0080 | ETA: 139.2m
+Ep  2860 | Steps  1145481 | Reward   285.75 | Avg(100):  251.48 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0080 | ETA: 138.8m
+  [Greedy eval] 255.09 over 20 eps  (train avg: 251.80 | LR: 2.3e-04 | Ent: 0.0080)
+Ep  2880 | Steps  1152361 | Reward   143.12 | Avg(100):  249.47 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 138.6m
+Ep  2900 | Steps  1157720 | Reward   266.81 | Avg(100):  254.97 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 138.2m
+Ep  2920 | Steps  1162439 | Reward   237.81 | Avg(100):  257.78 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 137.8m
+Ep  2940 | Steps  1168108 | Reward   283.75 | Avg(100):  260.34 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 137.5m
+Ep  2960 | Steps  1173338 | Reward   263.55 | Avg(100):  262.58 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 137.1m
+Ep  2980 | Steps  1180949 | Reward   265.98 | Avg(100):  262.95 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 136.7m
+Ep  3000 | Steps  1186966 | Reward   280.84 | Avg(100):  261.56 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 136.2m
+  [Greedy eval] 260.77 over 20 eps  (train avg: 261.18 | LR: 2.3e-04 | Ent: 0.0079)
+Ep  3020 | Steps  1194573 | Reward   255.29 | Avg(100):  256.80 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0079 | ETA: 135.8m
+Ep  3040 | Steps  1200108 | Reward   279.18 | Avg(100):  257.80 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 135.5m
+Ep  3060 | Steps  1204650 | Reward   266.29 | Avg(100):  256.69 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 135.2m
+Ep  3080 | Steps  1211553 | Reward   273.19 | Avg(100):  253.46 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 134.7m
+Ep  3100 | Steps  1217195 | Reward   277.16 | Avg(100):  256.34 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 134.4m
+Ep  3120 | Steps  1223832 | Reward   259.91 | Avg(100):  259.39 | Best:  265.32 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 134.0m
+  [Greedy eval] 271.69 over 20 eps  (train avg: 254.51 | LR: 2.3e-04 | Ent: 0.0078)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 271.69)
+Ep  3140 | Steps  1231431 | Reward   283.60 | Avg(100):  253.25 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 133.7m
+Ep  3160 | Steps  1239852 | Reward   243.18 | Avg(100):  249.44 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 133.2m
+Ep  3180 | Steps  1251082 | Reward   267.56 | Avg(100):  247.23 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0078 | ETA: 132.5m
+Ep  3200 | Steps  1256255 | Reward   303.61 | Avg(100):  247.40 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0077 | ETA: 132.2m
+Ep  3220 | Steps  1266805 | Reward   275.83 | Avg(100):  241.54 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0077 | ETA: 131.7m
+  [Greedy eval] 253.96 over 20 eps  (train avg: 243.00 | LR: 2.3e-04 | Ent: 0.0077)
+Ep  3240 | Steps  1273261 | Reward   303.30 | Avg(100):  246.35 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0077 | ETA: 131.5m
+Ep  3260 | Steps  1281100 | Reward   125.82 | Avg(100):  246.73 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0077 | ETA: 131.0m
+Ep  3280 | Steps  1290870 | Reward   148.91 | Avg(100):  247.10 | Best:  271.69 | LR: 2.3e-04 | Ent: 0.0077 | ETA: 130.5m
+Ep  3300 | Steps  1300894 | Reward   243.27 | Avg(100):  236.71 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0077 | ETA: 130.0m
+  [Greedy eval] 259.24 over 20 eps  (train avg: 235.23 | LR: 2.2e-04 | Ent: 0.0077)
+Ep  3320 | Steps  1311777 | Reward   250.09 | Avg(100):  233.49 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0076 | ETA: 129.7m
+Ep  3340 | Steps  1323127 | Reward   259.05 | Avg(100):  226.30 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0076 | ETA: 129.1m
+Ep  3360 | Steps  1335324 | Reward   258.67 | Avg(100):  222.14 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0076 | ETA: 128.5m
+Ep  3380 | Steps  1345522 | Reward   265.88 | Avg(100):  222.34 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0076 | ETA: 128.0m
+  [Greedy eval] 265.14 over 20 eps  (train avg: 225.58 | LR: 2.2e-04 | Ent: 0.0076)
+Ep  3400 | Steps  1356434 | Reward   261.12 | Avg(100):  224.59 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0076 | ETA: 127.6m
+Ep  3420 | Steps  1363123 | Reward   243.39 | Avg(100):  234.44 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0076 | ETA: 127.2m
+Ep  3440 | Steps  1374604 | Reward   126.90 | Avg(100):  233.17 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0075 | ETA: 126.6m
+Ep  3460 | Steps  1384735 | Reward   296.83 | Avg(100):  233.93 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0075 | ETA: 126.2m
+  [Greedy eval] 251.09 over 20 eps  (train avg: 236.17 | LR: 2.2e-04 | Ent: 0.0075)
+Ep  3480 | Steps  1394346 | Reward   278.00 | Avg(100):  235.31 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0075 | ETA: 125.9m
+Ep  3500 | Steps  1406087 | Reward   151.77 | Avg(100):  231.84 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0075 | ETA: 125.3m
+Ep  3520 | Steps  1418890 | Reward   158.61 | Avg(100):  222.43 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0074 | ETA: 124.8m
+Ep  3540 | Steps  1430348 | Reward   148.44 | Avg(100):  223.28 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0074 | ETA: 124.4m
+  [Greedy eval] 256.64 over 20 eps  (train avg: 225.80 | LR: 2.2e-04 | Ent: 0.0074)
+Ep  3560 | Steps  1443553 | Reward   164.94 | Avg(100):  220.39 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0074 | ETA: 124.7m
+Ep  3580 | Steps  1456113 | Reward   259.30 | Avg(100):  210.25 | Best:  271.69 | LR: 2.2e-04 | Ent: 0.0074 | ETA: 124.5m
+Ep  3600 | Steps  1467905 | Reward   138.46 | Avg(100):  210.36 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0074 | ETA: 124.0m
+  [Greedy eval] 241.08 over 20 eps  (train avg: 209.29 | LR: 2.1e-04 | Ent: 0.0074)
+Ep  3620 | Steps  1481135 | Reward   238.85 | Avg(100):  208.88 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0073 | ETA: 123.5m
+Ep  3640 | Steps  1493581 | Reward   280.42 | Avg(100):  205.39 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0073 | ETA: 122.9m
+Ep  3660 | Steps  1503753 | Reward   147.26 | Avg(100):  208.98 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0073 | ETA: 122.4m
+Ep  3680 | Steps  1514707 | Reward   154.41 | Avg(100):  213.55 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0073 | ETA: 121.9m
+  [Greedy eval] 247.63 over 20 eps  (train avg: 214.96 | LR: 2.1e-04 | Ent: 0.0073)
+Ep  3700 | Steps  1528451 | Reward   175.58 | Avg(100):  214.07 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0073 | ETA: 121.4m
+Ep  3720 | Steps  1543593 | Reward   298.41 | Avg(100):  213.24 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0072 | ETA: 120.7m
+  [Greedy eval] 246.91 over 20 eps  (train avg: 211.78 | LR: 2.1e-04 | Ent: 0.0072)
+Ep  3740 | Steps  1559909 | Reward   160.42 | Avg(100):  208.96 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0072 | ETA: 120.2m
+Ep  3760 | Steps  1576389 | Reward   161.08 | Avg(100):  201.20 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0072 | ETA: 119.5m
+Ep  3780 | Steps  1588308 | Reward   281.73 | Avg(100):  203.46 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0072 | ETA: 118.9m
+Ep  3800 | Steps  1605586 | Reward   183.51 | Avg(100):  196.48 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0071 | ETA: 118.1m
+Ep  3820 | Steps  1622319 | Reward   135.08 | Avg(100):  189.08 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0071 | ETA: 117.4m
+Ep  3840 | Steps  1635306 | Reward   141.99 | Avg(100):  191.70 | Best:  271.69 | LR: 2.1e-04 | Ent: 0.0071 | ETA: 116.8m
+Ep  3860 | Steps  1652023 | Reward   136.78 | Avg(100):  188.91 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0070 | ETA: 116.0m
+Ep  3880 | Steps  1667197 | Reward   101.46 | Avg(100):  181.05 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0070 | ETA: 115.4m
+Ep  3900 | Steps  1684891 | Reward   133.01 | Avg(100):  176.91 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0070 | ETA: 114.6m
+Ep  3920 | Steps  1700082 | Reward   117.35 | Avg(100):  180.77 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0069 | ETA: 113.9m
+Ep  3940 | Steps  1714536 | Reward   135.91 | Avg(100):  180.21 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0069 | ETA: 113.4m
+Ep  3960 | Steps  1733070 | Reward   118.46 | Avg(100):  177.21 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0069 | ETA: 112.5m
+Ep  3980 | Steps  1747257 | Reward   141.67 | Avg(100):  181.33 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0069 | ETA: 111.9m
+Ep  4000 | Steps  1765272 | Reward   116.57 | Avg(100):  180.44 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0068 | ETA: 111.1m
+Ep  4020 | Steps  1784523 | Reward   130.83 | Avg(100):  172.57 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0068 | ETA: 110.3m
+Ep  4040 | Steps  1801291 | Reward   259.12 | Avg(100):  164.66 | Best:  271.69 | LR: 2.0e-04 | Ent: 0.0068 | ETA: 109.6m
+Ep  4060 | Steps  1821291 | Reward   113.75 | Avg(100):  161.76 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0067 | ETA: 108.8m
+Ep  4080 | Steps  1839013 | Reward   239.89 | Avg(100):  155.40 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0067 | ETA: 108.0m
+Ep  4100 | Steps  1857968 | Reward   144.46 | Avg(100):  155.09 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0067 | ETA: 107.2m
+Ep  4120 | Steps  1875650 | Reward   108.51 | Avg(100):  157.29 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0066 | ETA: 106.5m
+Ep  4140 | Steps  1887963 | Reward    99.46 | Avg(100):  170.34 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0066 | ETA: 106.0m
+Ep  4160 | Steps  1898159 | Reward   229.53 | Avg(100):  184.61 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0066 | ETA: 105.6m
+Ep  4180 | Steps  1909265 | Reward   259.85 | Avg(100):  190.86 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0066 | ETA: 105.1m
+Ep  4200 | Steps  1919095 | Reward   282.09 | Avg(100):  204.21 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0065 | ETA: 104.7m
+  [Greedy eval] 250.09 over 20 eps  (train avg: 212.90 | LR: 1.9e-04 | Ent: 0.0065)
+Ep  4220 | Steps  1928989 | Reward   265.40 | Avg(100):  218.64 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0065 | ETA: 104.4m
+Ep  4240 | Steps  1939761 | Reward   281.11 | Avg(100):  220.80 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0065 | ETA: 104.1m
+Ep  4260 | Steps  1951533 | Reward   225.03 | Avg(100):  219.13 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0065 | ETA: 103.7m
+Ep  4280 | Steps  1961865 | Reward   239.52 | Avg(100):  223.33 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0065 | ETA: 103.3m
+  [Greedy eval] 242.07 over 20 eps  (train avg: 222.68 | LR: 1.9e-04 | Ent: 0.0065)
+Ep  4300 | Steps  1973724 | Reward   161.41 | Avg(100):  220.85 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0065 | ETA: 103.2m
+Ep  4320 | Steps  1986709 | Reward   255.22 | Avg(100):  214.92 | Best:  271.69 | LR: 1.9e-04 | Ent: 0.0064 | ETA: 102.7m
+Ep  4340 | Steps  1998547 | Reward   260.31 | Avg(100):  213.67 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0064 | ETA: 102.1m
+  [Greedy eval] 230.24 over 20 eps  (train avg: 212.50 | LR: 1.8e-04 | Ent: 0.0064)
+Ep  4360 | Steps  2012038 | Reward   277.46 | Avg(100):  211.27 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0064 | ETA: 101.8m
+Ep  4380 | Steps  2022823 | Reward   127.57 | Avg(100):  209.19 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0064 | ETA: 101.4m
+Ep  4400 | Steps  2035740 | Reward   264.11 | Avg(100):  210.09 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0063 | ETA: 100.9m
+Ep  4420 | Steps  2046935 | Reward   153.58 | Avg(100):  213.99 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0063 | ETA: 100.4m
+  [Greedy eval] 212.10 over 20 eps  (train avg: 213.82 | LR: 1.8e-04 | Ent: 0.0063)
+Ep  4440 | Steps  2055949 | Reward   240.05 | Avg(100):  213.04 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0063 | ETA: 100.2m
+Ep  4460 | Steps  2067610 | Reward   101.94 | Avg(100):  215.75 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0063 | ETA: 99.8m
+Ep  4480 | Steps  2075599 | Reward   147.08 | Avg(100):  221.62 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0063 | ETA: 99.4m
+Ep  4500 | Steps  2085280 | Reward   279.17 | Avg(100):  226.31 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0063 | ETA: 99.0m
+  [Greedy eval] 228.48 over 20 eps  (train avg: 227.72 | LR: 1.8e-04 | Ent: 0.0063)
+Ep  4520 | Steps  2094118 | Reward   229.78 | Avg(100):  229.77 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0062 | ETA: 98.8m
+Ep  4540 | Steps  2102053 | Reward    93.26 | Avg(100):  234.44 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0062 | ETA: 98.6m
+Ep  4560 | Steps  2110967 | Reward   272.71 | Avg(100):  238.60 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0062 | ETA: 98.3m
+Ep  4580 | Steps  2121547 | Reward   233.68 | Avg(100):  234.36 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0062 | ETA: 97.8m
+Ep  4600 | Steps  2129633 | Reward   265.77 | Avg(100):  234.38 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0062 | ETA: 97.5m
+  [Greedy eval] 254.32 over 20 eps  (train avg: 234.38 | LR: 1.8e-04 | Ent: 0.0062)
+Ep  4620 | Steps  2138617 | Reward   263.20 | Avg(100):  233.86 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0062 | ETA: 97.3m
+Ep  4640 | Steps  2147755 | Reward   280.09 | Avg(100):  232.57 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0061 | ETA: 96.9m
+Ep  4660 | Steps  2154936 | Reward   266.98 | Avg(100):  238.36 | Best:  271.69 | LR: 1.8e-04 | Ent: 0.0061 | ETA: 96.6m
+Ep  4680 | Steps  2165576 | Reward   257.45 | Avg(100):  235.66 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0061 | ETA: 96.2m
+  [Greedy eval] 244.70 over 20 eps  (train avg: 236.53 | LR: 1.7e-04 | Ent: 0.0061)
+Ep  4700 | Steps  2175238 | Reward   265.62 | Avg(100):  234.16 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0061 | ETA: 95.9m
+Ep  4720 | Steps  2184023 | Reward   285.08 | Avg(100):  232.11 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0061 | ETA: 95.5m
+Ep  4740 | Steps  2192065 | Reward   235.20 | Avg(100):  229.23 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0061 | ETA: 95.1m
+Ep  4760 | Steps  2198922 | Reward   127.09 | Avg(100):  224.26 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 94.9m
+Ep  4780 | Steps  2205996 | Reward   239.31 | Avg(100):  227.26 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 94.7m
+  [Greedy eval] 250.43 over 20 eps  (train avg: 224.90 | LR: 1.7e-04 | Ent: 0.0060)
+Ep  4800 | Steps  2213192 | Reward    35.07 | Avg(100):  224.12 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 94.6m
+Ep  4820 | Steps  2219117 | Reward   256.81 | Avg(100):  220.65 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 94.4m
+Ep  4840 | Steps  2225922 | Reward   282.36 | Avg(100):  218.94 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 94.2m
+Ep  4860 | Steps  2232923 | Reward   302.86 | Avg(100):  215.28 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 94.0m
+Ep  4880 | Steps  2240029 | Reward   143.61 | Avg(100):  219.38 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 93.8m
+Ep  4900 | Steps  2245138 | Reward   284.67 | Avg(100):  215.89 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 93.6m
+Ep  4920 | Steps  2251113 | Reward   137.03 | Avg(100):  207.62 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0060 | ETA: 93.3m
+  [Greedy eval] 251.00 over 20 eps  (train avg: 211.68 | LR: 1.7e-04 | Ent: 0.0060)
+Ep  4940 | Steps  2256463 | Reward   268.88 | Avg(100):  213.89 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 93.2m
+Ep  4960 | Steps  2262683 | Reward   239.57 | Avg(100):  213.81 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 93.0m
+Ep  4980 | Steps  2267724 | Reward    68.52 | Avg(100):  205.56 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 92.8m
+Ep  5000 | Steps  2273960 | Reward   276.21 | Avg(100):  212.75 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 92.7m
+Ep  5020 | Steps  2279701 | Reward    31.53 | Avg(100):  229.37 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 92.6m
+Ep  5040 | Steps  2287490 | Reward    23.96 | Avg(100):  215.87 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 92.4m
+  [Greedy eval] 226.78 over 20 eps  (train avg: 212.73 | LR: 1.7e-04 | Ent: 0.0059)
+Ep  5060 | Steps  2295721 | Reward   147.29 | Avg(100):  213.20 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 92.4m
+Ep  5080 | Steps  2302995 | Reward   160.38 | Avg(100):  220.14 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 92.2m
+Ep  5100 | Steps  2309686 | Reward   270.12 | Avg(100):  223.00 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0059 | ETA: 91.9m
+Ep  5120 | Steps  2317180 | Reward    38.34 | Avg(100):  206.21 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0058 | ETA: 91.8m
+Ep  5140 | Steps  2324025 | Reward   286.28 | Avg(100):  215.99 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0058 | ETA: 91.7m
+Ep  5160 | Steps  2329321 | Reward   290.49 | Avg(100):  209.52 | Best:  271.69 | LR: 1.7e-04 | Ent: 0.0058 | ETA: 91.6m
+  [Greedy eval] 229.62 over 20 eps  (train avg: 200.81 | LR: 1.7e-04 | Ent: 0.0058)
+Ep  5180 | Steps  2334912 | Reward   -36.34 | Avg(100):  195.86 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0058 | ETA: 91.6m
+Ep  5200 | Steps  2339270 | Reward    27.63 | Avg(100):  177.08 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0058 | ETA: 91.3m
+Ep  5220 | Steps  2347074 | Reward   280.28 | Avg(100):  185.03 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0058 | ETA: 91.0m
+Ep  5240 | Steps  2354225 | Reward   268.17 | Avg(100):  179.60 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0058 | ETA: 90.7m
+Ep  5260 | Steps  2360402 | Reward   288.56 | Avg(100):  188.19 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0058 | ETA: 90.5m
+Ep  5280 | Steps  2368611 | Reward   271.44 | Avg(100):  199.10 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 90.1m
+Ep  5300 | Steps  2373919 | Reward   246.14 | Avg(100):  204.91 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 89.9m
+  [Greedy eval] 218.25 over 20 eps  (train avg: 200.17 | LR: 1.6e-04 | Ent: 0.0057)
+Ep  5320 | Steps  2377827 | Reward   255.28 | Avg(100):  189.80 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 89.9m
+Ep  5340 | Steps  2384554 | Reward   -28.35 | Avg(100):  184.72 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 89.6m
+Ep  5360 | Steps  2391501 | Reward   285.20 | Avg(100):  182.59 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 89.3m
+Ep  5380 | Steps  2395981 | Reward   271.22 | Avg(100):  172.83 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 89.1m
+Ep  5400 | Steps  2402183 | Reward   -29.17 | Avg(100):  171.35 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 88.9m
+Ep  5420 | Steps  2408938 | Reward    32.73 | Avg(100):  189.56 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 88.7m
+Ep  5440 | Steps  2416426 | Reward   273.58 | Avg(100):  199.28 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 88.5m
+Ep  5460 | Steps  2422041 | Reward   233.16 | Avg(100):  199.80 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0057 | ETA: 88.3m
+Ep  5480 | Steps  2427755 | Reward   299.32 | Avg(100):  208.16 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 88.2m
+Ep  5500 | Steps  2432826 | Reward   263.72 | Avg(100):  217.28 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 88.0m
+Ep  5520 | Steps  2440249 | Reward   244.03 | Avg(100):  212.06 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 87.8m
+Ep  5540 | Steps  2445439 | Reward    -7.84 | Avg(100):  198.64 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 87.7m
+Ep  5560 | Steps  2451965 | Reward   261.49 | Avg(100):  196.46 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 87.5m
+Ep  5580 | Steps  2457443 | Reward   269.83 | Avg(100):  202.79 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 87.3m
+  [Greedy eval] 243.41 over 20 eps  (train avg: 202.79 | LR: 1.6e-04 | Ent: 0.0056)
+Ep  5600 | Steps  2463240 | Reward   253.57 | Avg(100):  200.98 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 87.3m
+Ep  5620 | Steps  2469724 | Reward   278.14 | Avg(100):  202.84 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0056 | ETA: 87.1m
+Ep  5640 | Steps  2475063 | Reward    53.70 | Avg(100):  218.59 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0055 | ETA: 86.9m
+Ep  5660 | Steps  2479871 | Reward   236.24 | Avg(100):  222.33 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0055 | ETA: 86.7m
+Ep  5680 | Steps  2486185 | Reward   232.24 | Avg(100):  214.25 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0055 | ETA: 86.6m
+Ep  5700 | Steps  2491038 | Reward   281.33 | Avg(100):  220.65 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0055 | ETA: 86.5m
+Ep  5720 | Steps  2496464 | Reward  -230.74 | Avg(100):  215.97 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0055 | ETA: 86.3m
+  [Greedy eval] 254.94 over 20 eps  (train avg: 211.61 | LR: 1.6e-04 | Ent: 0.0055)
+Ep  5740 | Steps  2500936 | Reward   292.69 | Avg(100):  209.15 | Best:  271.69 | LR: 1.6e-04 | Ent: 0.0055 | ETA: 86.3m
+Ep  5760 | Steps  2507698 | Reward   294.91 | Avg(100):  215.25 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0055 | ETA: 86.1m
+Ep  5780 | Steps  2513271 | Reward   283.83 | Avg(100):  214.42 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0055 | ETA: 85.9m
+Ep  5800 | Steps  2518869 | Reward   263.23 | Avg(100):  216.64 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0055 | ETA: 85.8m
+Ep  5820 | Steps  2526280 | Reward   280.70 | Avg(100):  225.23 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0055 | ETA: 85.6m
+Ep  5840 | Steps  2532473 | Reward   262.59 | Avg(100):  235.73 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 85.4m
+Ep  5860 | Steps  2538979 | Reward   250.89 | Avg(100):  234.21 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 85.2m
+  [Greedy eval] 255.49 over 20 eps  (train avg: 234.58 | LR: 1.5e-04 | Ent: 0.0054)
+Ep  5880 | Steps  2544348 | Reward   272.90 | Avg(100):  244.08 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 85.1m
+Ep  5900 | Steps  2551238 | Reward   229.41 | Avg(100):  243.80 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 84.9m
+Ep  5920 | Steps  2558114 | Reward   277.50 | Avg(100):  250.93 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 84.6m
+Ep  5940 | Steps  2564682 | Reward   257.79 | Avg(100):  250.69 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 84.3m
+Ep  5960 | Steps  2571086 | Reward   288.23 | Avg(100):  255.25 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 84.1m
+Ep  5980 | Steps  2577454 | Reward   276.87 | Avg(100):  257.71 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 84.0m
+  [Greedy eval] 256.47 over 20 eps  (train avg: 257.17 | LR: 1.5e-04 | Ent: 0.0054)
+Ep  6000 | Steps  2585128 | Reward   258.74 | Avg(100):  257.33 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0054 | ETA: 83.9m
+Ep  6020 | Steps  2592590 | Reward   255.36 | Avg(100):  255.45 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 83.8m
+Ep  6040 | Steps  2600110 | Reward   253.37 | Avg(100):  256.46 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 83.6m
+Ep  6060 | Steps  2608206 | Reward   222.63 | Avg(100):  252.66 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 83.5m
+Ep  6080 | Steps  2619349 | Reward   154.71 | Avg(100):  248.00 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 83.2m
+  [Greedy eval] 268.60 over 20 eps  (train avg: 249.45 | LR: 1.5e-04 | Ent: 0.0053)
+Ep  6100 | Steps  2627272 | Reward   265.71 | Avg(100):  246.88 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 83.1m
+Ep  6120 | Steps  2635872 | Reward   259.32 | Avg(100):  246.20 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 82.9m
+Ep  6140 | Steps  2643034 | Reward   233.41 | Avg(100):  244.62 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0053 | ETA: 82.8m
+Ep  6160 | Steps  2652493 | Reward   280.50 | Avg(100):  244.00 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0052 | ETA: 82.5m
+Ep  6180 | Steps  2661109 | Reward   277.24 | Avg(100):  243.51 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0052 | ETA: 82.3m
+  [Greedy eval] 263.89 over 20 eps  (train avg: 242.93 | LR: 1.5e-04 | Ent: 0.0052)
+Ep  6200 | Steps  2671646 | Reward   167.11 | Avg(100):  237.65 | Best:  271.69 | LR: 1.5e-04 | Ent: 0.0052 | ETA: 82.1m
+Ep  6220 | Steps  2680739 | Reward   232.75 | Avg(100):  238.02 | Best:  271.69 | LR: 1.4e-04 | Ent: 0.0052 | ETA: 81.9m
+Ep  6240 | Steps  2688139 | Reward   255.20 | Avg(100):  240.31 | Best:  271.69 | LR: 1.4e-04 | Ent: 0.0052 | ETA: 81.7m
+Ep  6260 | Steps  2695113 | Reward   291.68 | Avg(100):  245.87 | Best:  271.69 | LR: 1.4e-04 | Ent: 0.0052 | ETA: 81.5m
+Ep  6280 | Steps  2700964 | Reward   256.47 | Avg(100):  247.76 | Best:  271.69 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 81.4m
+  [Greedy eval] 273.02 over 20 eps  (train avg: 249.88 | LR: 1.4e-04 | Ent: 0.0051)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 273.02)
+Ep  6300 | Steps  2707272 | Reward   225.02 | Avg(100):  255.06 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 81.3m
+Ep  6320 | Steps  2712775 | Reward   284.94 | Avg(100):  257.39 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 81.1m
+Ep  6340 | Steps  2718102 | Reward   240.56 | Avg(100):  255.76 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.9m
+Ep  6360 | Steps  2723567 | Reward   239.25 | Avg(100):  253.03 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.7m
+Ep  6380 | Steps  2728508 | Reward   249.00 | Avg(100):  242.55 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.6m
+Ep  6400 | Steps  2733318 | Reward   287.01 | Avg(100):  245.68 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.4m
+Ep  6420 | Steps  2738437 | Reward   276.35 | Avg(100):  246.87 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.3m
+Ep  6440 | Steps  2744212 | Reward    76.23 | Avg(100):  245.52 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.1m
+  [Greedy eval] 261.28 over 20 eps  (train avg: 245.52 | LR: 1.4e-04 | Ent: 0.0051)
+Ep  6460 | Steps  2750022 | Reward   290.78 | Avg(100):  245.86 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0051 | ETA: 80.0m
+Ep  6480 | Steps  2755137 | Reward   289.57 | Avg(100):  259.29 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 79.9m
+Ep  6500 | Steps  2759739 | Reward   262.61 | Avg(100):  256.06 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 79.7m
+Ep  6520 | Steps  2764839 | Reward   229.58 | Avg(100):  257.28 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 79.5m
+Ep  6540 | Steps  2769962 | Reward   285.17 | Avg(100):  258.01 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 79.3m
+Ep  6560 | Steps  2775074 | Reward   286.35 | Avg(100):  261.73 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 79.1m
+Ep  6580 | Steps  2781118 | Reward   282.48 | Avg(100):  261.18 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 78.8m
+  [Greedy eval] 255.19 over 20 eps  (train avg: 258.14 | LR: 1.4e-04 | Ent: 0.0050)
+Ep  6600 | Steps  2786226 | Reward   263.46 | Avg(100):  259.10 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 78.6m
+Ep  6620 | Steps  2791479 | Reward   274.30 | Avg(100):  252.92 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 78.4m
+Ep  6640 | Steps  2796225 | Reward   278.78 | Avg(100):  253.03 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 78.2m
+Ep  6660 | Steps  2800678 | Reward   291.73 | Avg(100):  244.17 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 78.0m
+Ep  6680 | Steps  2805295 | Reward   303.45 | Avg(100):  244.88 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0050 | ETA: 77.8m
+Ep  6700 | Steps  2810057 | Reward   281.96 | Avg(100):  249.08 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 77.6m
+Ep  6720 | Steps  2814886 | Reward   280.66 | Avg(100):  250.12 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 77.4m
+Ep  6740 | Steps  2819160 | Reward   249.57 | Avg(100):  248.97 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 77.2m
+Ep  6760 | Steps  2823685 | Reward   286.99 | Avg(100):  248.58 | Best:  273.02 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 77.0m
+  [Greedy eval] 278.06 over 20 eps  (train avg: 248.73 | LR: 1.4e-04 | Ent: 0.0049)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 278.06)
+Ep  6780 | Steps  2828347 | Reward    30.51 | Avg(100):  240.06 | Best:  278.06 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 76.8m
+Ep  6800 | Steps  2831887 | Reward   -44.27 | Avg(100):  213.38 | Best:  278.06 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 76.7m
+Ep  6820 | Steps  2836364 | Reward   271.41 | Avg(100):  212.41 | Best:  278.06 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 76.5m
+Ep  6840 | Steps  2840815 | Reward   262.84 | Avg(100):  195.50 | Best:  278.06 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 76.3m
+Ep  6860 | Steps  2845097 | Reward   244.73 | Avg(100):  196.88 | Best:  278.06 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 76.1m
+Ep  6880 | Steps  2849043 | Reward   284.57 | Avg(100):  191.01 | Best:  278.06 | LR: 1.4e-04 | Ent: 0.0049 | ETA: 75.9m
+Ep  6900 | Steps  2853338 | Reward   289.30 | Avg(100):  214.92 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0049 | ETA: 75.7m
+Ep  6920 | Steps  2857427 | Reward    30.48 | Avg(100):  211.48 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0049 | ETA: 75.6m
+Ep  6940 | Steps  2861666 | Reward   272.81 | Avg(100):  205.76 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0049 | ETA: 75.4m
+Ep  6960 | Steps  2865844 | Reward   267.63 | Avg(100):  203.62 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0049 | ETA: 75.2m
+  [Greedy eval] 271.16 over 20 eps  (train avg: 201.08 | LR: 1.3e-04 | Ent: 0.0049)
+Ep  6980 | Steps  2869993 | Reward   304.20 | Avg(100):  212.49 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 75.1m
+Ep  7000 | Steps  2874050 | Reward   274.76 | Avg(100):  207.44 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 74.9m
+Ep  7020 | Steps  2878314 | Reward   292.74 | Avg(100):  213.45 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 74.7m
+Ep  7040 | Steps  2882982 | Reward   276.94 | Avg(100):  243.17 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 74.5m
+Ep  7060 | Steps  2887856 | Reward   286.16 | Avg(100):  239.86 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 74.4m
+Ep  7080 | Steps  2892211 | Reward   266.41 | Avg(100):  242.17 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 74.2m
+Ep  7100 | Steps  2896703 | Reward    56.11 | Avg(100):  246.62 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 74.0m
+Ep  7120 | Steps  2901048 | Reward   255.09 | Avg(100):  246.38 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 73.8m
+Ep  7140 | Steps  2904981 | Reward    46.66 | Avg(100):  236.40 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 73.6m
+  [Greedy eval] 274.63 over 20 eps  (train avg: 241.18 | LR: 1.3e-04 | Ent: 0.0048)
+Ep  7160 | Steps  2908962 | Reward   277.67 | Avg(100):  241.43 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 73.5m
+Ep  7180 | Steps  2913091 | Reward   299.72 | Avg(100):  235.50 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 73.3m
+Ep  7200 | Steps  2916721 | Reward    60.68 | Avg(100):  217.73 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 73.2m
+Ep  7220 | Steps  2920828 | Reward   300.71 | Avg(100):  213.31 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0048 | ETA: 73.0m
+Ep  7240 | Steps  2925641 | Reward   277.74 | Avg(100):  214.29 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 72.8m
+Ep  7260 | Steps  2929405 | Reward   246.64 | Avg(100):  202.43 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 72.6m
+Ep  7280 | Steps  2933457 | Reward   273.55 | Avg(100):  205.30 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 72.4m
+Ep  7300 | Steps  2938933 | Reward   272.99 | Avg(100):  216.64 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 72.2m
+Ep  7320 | Steps  2944073 | Reward   295.48 | Avg(100):  215.14 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 72.0m
+Ep  7340 | Steps  2948646 | Reward   297.55 | Avg(100):  223.31 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 71.8m
+  [Greedy eval] 272.49 over 20 eps  (train avg: 227.02 | LR: 1.3e-04 | Ent: 0.0047)
+Ep  7360 | Steps  2953832 | Reward   312.64 | Avg(100):  241.74 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 71.6m
+Ep  7380 | Steps  2958538 | Reward   296.10 | Avg(100):  251.68 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 71.4m
+Ep  7400 | Steps  2962690 | Reward   313.41 | Avg(100):  262.28 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 71.2m
+Ep  7420 | Steps  2966510 | Reward   275.81 | Avg(100):  261.13 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 71.1m
+Ep  7440 | Steps  2970756 | Reward   256.74 | Avg(100):  258.57 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0047 | ETA: 70.9m
+Ep  7460 | Steps  2974557 | Reward   280.95 | Avg(100):  247.60 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 70.7m
+Ep  7480 | Steps  2978433 | Reward    -7.56 | Avg(100):  241.47 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 70.6m
+Ep  7500 | Steps  2982346 | Reward   301.30 | Avg(100):  239.39 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 70.4m
+Ep  7520 | Steps  2986437 | Reward   278.22 | Avg(100):  250.63 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 70.2m
+  [Greedy eval] 271.27 over 20 eps  (train avg: 248.11 | LR: 1.3e-04 | Ent: 0.0046)
+Ep  7540 | Steps  2992556 | Reward   275.52 | Avg(100):  244.98 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 70.0m
+Ep  7560 | Steps  2996164 | Reward   280.79 | Avg(100):  249.54 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 69.8m
+Ep  7580 | Steps  3000206 | Reward   290.86 | Avg(100):  247.45 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 69.7m
+Ep  7600 | Steps  3005743 | Reward   -76.42 | Avg(100):  245.70 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 69.4m
+Ep  7620 | Steps  3010561 | Reward   256.99 | Avg(100):  244.81 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 69.3m
+Ep  7640 | Steps  3016459 | Reward   266.57 | Avg(100):  251.58 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 69.0m
+Ep  7660 | Steps  3021287 | Reward   257.68 | Avg(100):  258.25 | Best:  278.06 | LR: 1.3e-04 | Ent: 0.0046 | ETA: 68.8m
+Ep  7680 | Steps  3025429 | Reward   256.96 | Avg(100):  265.60 | Best:  278.06 | LR: 1.2e-04 | Ent: 0.0046 | ETA: 68.6m
+Ep  7700 | Steps  3030270 | Reward   292.31 | Avg(100):  273.27 | Best:  278.06 | LR: 1.2e-04 | Ent: 0.0046 | ETA: 68.4m
+  [Greedy eval] 281.94 over 20 eps  (train avg: 273.23 | LR: 1.2e-04 | Ent: 0.0046)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 281.94)
+Ep  7720 | Steps  3034360 | Reward   283.34 | Avg(100):  276.71 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 68.3m
+Ep  7740 | Steps  3038707 | Reward   274.13 | Avg(100):  278.48 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 68.1m
+Ep  7760 | Steps  3042718 | Reward   279.14 | Avg(100):  282.25 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 67.9m
+Ep  7780 | Steps  3047600 | Reward   295.21 | Avg(100):  281.36 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 67.8m
+Ep  7800 | Steps  3051470 | Reward   268.59 | Avg(100):  279.63 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 67.6m
+Ep  7820 | Steps  3056392 | Reward   305.13 | Avg(100):  277.13 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 67.4m
+Ep  7840 | Steps  3060333 | Reward   272.53 | Avg(100):  277.56 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 67.2m
+Ep  7860 | Steps  3064674 | Reward   294.87 | Avg(100):  277.50 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 67.1m
+Ep  7880 | Steps  3068871 | Reward   258.46 | Avg(100):  280.35 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 66.9m
+  [Greedy eval] 275.95 over 20 eps  (train avg: 278.26 | LR: 1.2e-04 | Ent: 0.0045)
+Ep  7900 | Steps  3072742 | Reward   287.89 | Avg(100):  278.91 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 66.7m
+Ep  7920 | Steps  3077572 | Reward   269.75 | Avg(100):  280.22 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 66.5m
+Ep  7940 | Steps  3081220 | Reward   252.54 | Avg(100):  278.73 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 66.4m
+Ep  7960 | Steps  3086201 | Reward   294.54 | Avg(100):  278.15 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0045 | ETA: 66.2m
+Ep  7980 | Steps  3089861 | Reward   303.62 | Avg(100):  275.61 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 66.0m
+Ep  8000 | Steps  3093545 | Reward   305.22 | Avg(100):  274.99 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 65.9m
+Ep  8020 | Steps  3097280 | Reward   306.44 | Avg(100):  274.43 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 65.7m
+Ep  8040 | Steps  3101107 | Reward   286.85 | Avg(100):  274.47 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 65.6m
+Ep  8060 | Steps  3104968 | Reward   245.41 | Avg(100):  274.78 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 65.4m
+Ep  8080 | Steps  3109524 | Reward   189.75 | Avg(100):  272.37 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 65.2m
+  [Greedy eval] 277.64 over 20 eps  (train avg: 274.11 | LR: 1.2e-04 | Ent: 0.0044)
+Ep  8100 | Steps  3113497 | Reward   253.18 | Avg(100):  274.45 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 65.1m
+Ep  8120 | Steps  3117115 | Reward   288.05 | Avg(100):  271.98 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.9m
+Ep  8140 | Steps  3120954 | Reward   255.96 | Avg(100):  271.15 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.8m
+Ep  8160 | Steps  3125128 | Reward   298.01 | Avg(100):  269.71 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.6m
+Ep  8180 | Steps  3129092 | Reward   290.63 | Avg(100):  273.06 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.4m
+Ep  8200 | Steps  3132838 | Reward   264.73 | Avg(100):  271.96 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.3m
+Ep  8220 | Steps  3136512 | Reward   249.67 | Avg(100):  272.61 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.1m
+Ep  8240 | Steps  3140212 | Reward   304.08 | Avg(100):  272.08 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 64.0m
+Ep  8260 | Steps  3144035 | Reward   316.03 | Avg(100):  272.48 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0044 | ETA: 63.8m
+Ep  8280 | Steps  3148493 | Reward   282.44 | Avg(100):  268.71 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 63.7m
+Ep  8300 | Steps  3152256 | Reward   274.91 | Avg(100):  268.27 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 63.5m
+  [Greedy eval] 281.32 over 20 eps  (train avg: 266.98 | LR: 1.2e-04 | Ent: 0.0043)
+Ep  8320 | Steps  3155734 | Reward   318.81 | Avg(100):  258.31 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 63.4m
+Ep  8340 | Steps  3159433 | Reward   273.36 | Avg(100):  257.53 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 63.2m
+Ep  8360 | Steps  3163660 | Reward   287.22 | Avg(100):  246.41 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 63.1m
+Ep  8380 | Steps  3167200 | Reward     0.44 | Avg(100):  237.57 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 62.9m
+Ep  8400 | Steps  3171543 | Reward   283.96 | Avg(100):  231.37 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 62.7m
+Ep  8420 | Steps  3175216 | Reward   255.47 | Avg(100):  239.58 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 62.6m
+Ep  8440 | Steps  3178959 | Reward   290.18 | Avg(100):  238.08 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 62.4m
+Ep  8460 | Steps  3183502 | Reward   305.43 | Avg(100):  243.72 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 62.3m
+Ep  8480 | Steps  3188876 | Reward   246.37 | Avg(100):  250.27 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 62.1m
+Ep  8500 | Steps  3192743 | Reward   287.09 | Avg(100):  253.51 | Best:  281.94 | LR: 1.2e-04 | Ent: 0.0043 | ETA: 61.9m
+  [Greedy eval] 279.27 over 20 eps  (train avg: 254.02 | LR: 1.2e-04 | Ent: 0.0043)
+Ep  8520 | Steps  3196358 | Reward   304.25 | Avg(100):  251.72 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 61.8m
+Ep  8540 | Steps  3200090 | Reward   304.35 | Avg(100):  256.64 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 61.6m
+Ep  8560 | Steps  3203702 | Reward   298.75 | Avg(100):  255.76 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 61.5m
+Ep  8580 | Steps  3207405 | Reward   244.31 | Avg(100):  260.36 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 61.3m
+Ep  8600 | Steps  3210953 | Reward   304.61 | Avg(100):  260.74 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 61.2m
+Ep  8620 | Steps  3214772 | Reward   278.05 | Avg(100):  267.30 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 61.0m
+Ep  8640 | Steps  3218619 | Reward   240.75 | Avg(100):  266.75 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.9m
+Ep  8660 | Steps  3222227 | Reward   283.35 | Avg(100):  273.14 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.7m
+Ep  8680 | Steps  3225637 | Reward   269.02 | Avg(100):  268.69 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.6m
+Ep  8700 | Steps  3229384 | Reward   283.05 | Avg(100):  272.83 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.4m
+Ep  8720 | Steps  3233671 | Reward   267.83 | Avg(100):  272.53 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.3m
+  [Greedy eval] 276.15 over 20 eps  (train avg: 272.25 | LR: 1.1e-04 | Ent: 0.0042)
+Ep  8740 | Steps  3237317 | Reward   299.91 | Avg(100):  268.58 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.1m
+Ep  8760 | Steps  3240857 | Reward   235.52 | Avg(100):  266.26 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 60.0m
+Ep  8780 | Steps  3244507 | Reward   269.47 | Avg(100):  272.25 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 59.9m
+Ep  8800 | Steps  3248284 | Reward   303.02 | Avg(100):  271.48 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0042 | ETA: 59.7m
+Ep  8820 | Steps  3252306 | Reward   295.21 | Avg(100):  270.92 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 59.6m
+Ep  8840 | Steps  3256742 | Reward   305.30 | Avg(100):  271.79 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 59.4m
+Ep  8860 | Steps  3261286 | Reward   257.94 | Avg(100):  271.71 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 59.3m
+Ep  8880 | Steps  3266661 | Reward   103.72 | Avg(100):  266.71 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 59.1m
+Ep  8900 | Steps  3271218 | Reward   307.20 | Avg(100):  266.16 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 59.0m
+Ep  8920 | Steps  3275164 | Reward   268.15 | Avg(100):  266.23 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.8m
+  [Greedy eval] 259.56 over 20 eps  (train avg: 262.33 | LR: 1.1e-04 | Ent: 0.0041)
+Ep  8940 | Steps  3279723 | Reward   271.45 | Avg(100):  263.65 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.7m
+Ep  8960 | Steps  3283491 | Reward   271.36 | Avg(100):  264.47 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.5m
+Ep  8980 | Steps  3287056 | Reward   272.19 | Avg(100):  268.73 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.4m
+Ep  9000 | Steps  3290812 | Reward   260.46 | Avg(100):  269.30 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.3m
+Ep  9020 | Steps  3294378 | Reward   258.14 | Avg(100):  268.29 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.2m
+Ep  9040 | Steps  3298067 | Reward   235.79 | Avg(100):  271.61 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 58.0m
+Ep  9060 | Steps  3302641 | Reward   261.55 | Avg(100):  270.78 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 57.9m
+Ep  9080 | Steps  3306169 | Reward   266.68 | Avg(100):  268.27 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0041 | ETA: 57.8m
+Ep  9100 | Steps  3309876 | Reward   246.05 | Avg(100):  267.22 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 57.6m
+Ep  9120 | Steps  3314228 | Reward   283.69 | Avg(100):  263.63 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 57.5m
+  [Greedy eval] 266.69 over 20 eps  (train avg: 255.76 | LR: 1.1e-04 | Ent: 0.0040)
+Ep  9140 | Steps  3319559 | Reward   286.19 | Avg(100):  256.46 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 57.4m
+Ep  9160 | Steps  3324137 | Reward   277.89 | Avg(100):  253.52 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 57.2m
+Ep  9180 | Steps  3328683 | Reward   294.56 | Avg(100):  252.97 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 57.1m
+Ep  9200 | Steps  3333134 | Reward   179.50 | Avg(100):  254.40 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.9m
+Ep  9220 | Steps  3337419 | Reward   285.51 | Avg(100):  250.69 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.8m
+Ep  9240 | Steps  3341008 | Reward   273.37 | Avg(100):  257.76 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.7m
+Ep  9260 | Steps  3345476 | Reward   249.11 | Avg(100):  261.88 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.6m
+Ep  9280 | Steps  3348989 | Reward    19.37 | Avg(100):  260.27 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.4m
+Ep  9300 | Steps  3352881 | Reward   255.79 | Avg(100):  260.18 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.3m
+Ep  9320 | Steps  3356603 | Reward   312.94 | Avg(100):  270.64 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.1m
+  [Greedy eval] 258.09 over 20 eps  (train avg: 271.38 | LR: 1.1e-04 | Ent: 0.0040)
+Ep  9340 | Steps  3360393 | Reward   286.84 | Avg(100):  272.37 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.1m
+Ep  9360 | Steps  3364813 | Reward   308.83 | Avg(100):  269.46 | Best:  281.94 | LR: 1.1e-04 | Ent: 0.0040 | ETA: 56.0m
+Ep  9380 | Steps  3368360 | Reward   -29.36 | Avg(100):  270.17 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 55.8m
+Ep  9400 | Steps  3371656 | Reward   301.12 | Avg(100):  264.81 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 55.7m
+Ep  9420 | Steps  3376143 | Reward   245.89 | Avg(100):  256.12 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 55.6m
+Ep  9440 | Steps  3379482 | Reward   281.23 | Avg(100):  247.48 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 55.4m
+Ep  9460 | Steps  3385086 | Reward   274.05 | Avg(100):  246.02 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 55.3m
+Ep  9480 | Steps  3389492 | Reward   308.30 | Avg(100):  244.03 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 55.1m
+Ep  9500 | Steps  3394151 | Reward   284.36 | Avg(100):  240.27 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.9m
+Ep  9520 | Steps  3397878 | Reward   308.28 | Avg(100):  242.04 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.8m
+  [Greedy eval] 278.24 over 20 eps  (train avg: 246.43 | LR: 1.0e-04 | Ent: 0.0039)
+Ep  9540 | Steps  3401449 | Reward   293.28 | Avg(100):  245.33 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.7m
+Ep  9560 | Steps  3404892 | Reward   288.01 | Avg(100):  243.05 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.6m
+Ep  9580 | Steps  3408525 | Reward   282.24 | Avg(100):  247.73 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.4m
+Ep  9600 | Steps  3411939 | Reward   -35.80 | Avg(100):  250.49 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.3m
+Ep  9620 | Steps  3416430 | Reward   251.17 | Avg(100):  251.09 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.2m
+Ep  9640 | Steps  3420793 | Reward   293.14 | Avg(100):  248.52 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0039 | ETA: 54.1m
+Ep  9660 | Steps  3424576 | Reward   300.63 | Avg(100):  253.16 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 54.0m
+Ep  9680 | Steps  3428899 | Reward    18.31 | Avg(100):  245.47 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.8m
+Ep  9700 | Steps  3432350 | Reward   277.11 | Avg(100):  243.11 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.7m
+Ep  9720 | Steps  3435721 | Reward   -30.61 | Avg(100):  236.43 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.6m
+Ep  9740 | Steps  3439157 | Reward   284.50 | Avg(100):  238.72 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.4m
+  [Greedy eval] 275.35 over 20 eps  (train avg: 238.85 | LR: 1.0e-04 | Ent: 0.0038)
+Ep  9760 | Steps  3443578 | Reward   305.36 | Avg(100):  240.89 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.3m
+Ep  9780 | Steps  3447057 | Reward    44.13 | Avg(100):  239.67 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.2m
+Ep  9800 | Steps  3451746 | Reward   280.10 | Avg(100):  246.19 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.1m
+Ep  9820 | Steps  3455211 | Reward   299.40 | Avg(100):  250.80 | Best:  281.94 | LR: 1.0e-04 | Ent: 0.0038 | ETA: 53.0m
+Ep  9840 | Steps  3458917 | Reward   327.04 | Avg(100):  258.16 | Best:  281.94 | LR: 9.9e-05 | Ent: 0.0038 | ETA: 52.9m
+Ep  9860 | Steps  3462447 | Reward   282.76 | Avg(100):  254.19 | Best:  281.94 | LR: 9.9e-05 | Ent: 0.0038 | ETA: 52.7m
+Ep  9880 | Steps  3466192 | Reward   291.14 | Avg(100):  265.99 | Best:  281.94 | LR: 9.9e-05 | Ent: 0.0038 | ETA: 52.7m
+Ep  9900 | Steps  3469857 | Reward   291.75 | Avg(100):  268.45 | Best:  281.94 | LR: 9.9e-05 | Ent: 0.0038 | ETA: 52.5m
+Ep  9920 | Steps  3473426 | Reward   304.11 | Avg(100):  275.90 | Best:  281.94 | LR: 9.9e-05 | Ent: 0.0037 | ETA: 52.4m
+Ep  9940 | Steps  3477802 | Reward   300.76 | Avg(100):  271.11 | Best:  281.94 | LR: 9.9e-05 | Ent: 0.0037 | ETA: 52.3m
+  [Greedy eval] 275.83 over 20 eps  (train avg: 272.73 | LR: 9.9e-05 | Ent: 0.0037)
+Ep  9960 | Steps  3482116 | Reward   296.32 | Avg(100):  273.07 | Best:  281.94 | LR: 9.8e-05 | Ent: 0.0037 | ETA: 52.1m
+Ep  9980 | Steps  3486588 | Reward   291.47 | Avg(100):  271.50 | Best:  281.94 | LR: 9.8e-05 | Ent: 0.0037 | ETA: 52.0m
+Ep 10000 | Steps  3490065 | Reward   315.38 | Avg(100):  269.05 | Best:  281.94 | LR: 9.8e-05 | Ent: 0.0037 | ETA: 51.9m
+Ep 10020 | Steps  3494474 | Reward   290.02 | Avg(100):  260.71 | Best:  281.94 | LR: 9.8e-05 | Ent: 0.0037 | ETA: 51.7m
+Ep 10040 | Steps  3497984 | Reward    -5.70 | Avg(100):  260.82 | Best:  281.94 | LR: 9.8e-05 | Ent: 0.0037 | ETA: 51.6m
+Ep 10060 | Steps  3501651 | Reward   297.11 | Avg(100):  265.69 | Best:  281.94 | LR: 9.7e-05 | Ent: 0.0037 | ETA: 51.5m
+Ep 10080 | Steps  3505112 | Reward   239.47 | Avg(100):  261.36 | Best:  281.94 | LR: 9.7e-05 | Ent: 0.0037 | ETA: 51.4m
+Ep 10100 | Steps  3509555 | Reward   291.56 | Avg(100):  262.31 | Best:  281.94 | LR: 9.7e-05 | Ent: 0.0037 | ETA: 51.2m
+Ep 10120 | Steps  3513025 | Reward   277.45 | Avg(100):  268.85 | Best:  281.94 | LR: 9.7e-05 | Ent: 0.0037 | ETA: 51.1m
+Ep 10140 | Steps  3516405 | Reward   284.36 | Avg(100):  264.13 | Best:  281.94 | LR: 9.6e-05 | Ent: 0.0037 | ETA: 51.0m
+Ep 10160 | Steps  3520064 | Reward   252.43 | Avg(100):  261.64 | Best:  281.94 | LR: 9.6e-05 | Ent: 0.0037 | ETA: 50.9m
+  [Greedy eval] 280.82 over 20 eps  (train avg: 263.94 | LR: 9.6e-05 | Ent: 0.0037)
+Ep 10180 | Steps  3524546 | Reward   278.37 | Avg(100):  267.43 | Best:  281.94 | LR: 9.6e-05 | Ent: 0.0037 | ETA: 50.7m
+Ep 10200 | Steps  3528236 | Reward   251.01 | Avg(100):  267.78 | Best:  281.94 | LR: 9.6e-05 | Ent: 0.0037 | ETA: 50.6m
+Ep 10220 | Steps  3531638 | Reward   244.22 | Avg(100):  265.79 | Best:  281.94 | LR: 9.5e-05 | Ent: 0.0036 | ETA: 50.5m
+Ep 10240 | Steps  3535227 | Reward   294.68 | Avg(100):  272.24 | Best:  281.94 | LR: 9.5e-05 | Ent: 0.0036 | ETA: 50.4m
+Ep 10260 | Steps  3539591 | Reward   283.56 | Avg(100):  273.21 | Best:  281.94 | LR: 9.5e-05 | Ent: 0.0036 | ETA: 50.2m
+Ep 10280 | Steps  3543731 | Reward   279.05 | Avg(100):  266.41 | Best:  281.94 | LR: 9.5e-05 | Ent: 0.0036 | ETA: 50.1m
+Ep 10300 | Steps  3547328 | Reward   279.86 | Avg(100):  264.24 | Best:  281.94 | LR: 9.4e-05 | Ent: 0.0036 | ETA: 50.0m
+Ep 10320 | Steps  3550810 | Reward   308.22 | Avg(100):  264.81 | Best:  281.94 | LR: 9.4e-05 | Ent: 0.0036 | ETA: 49.9m
+Ep 10340 | Steps  3554738 | Reward   305.15 | Avg(100):  269.25 | Best:  281.94 | LR: 9.4e-05 | Ent: 0.0036 | ETA: 49.7m
+Ep 10360 | Steps  3558483 | Reward   265.80 | Avg(100):  265.96 | Best:  281.94 | LR: 9.4e-05 | Ent: 0.0036 | ETA: 49.6m
+Ep 10380 | Steps  3562125 | Reward   290.93 | Avg(100):  269.71 | Best:  281.94 | LR: 9.4e-05 | Ent: 0.0036 | ETA: 49.5m
+  [Greedy eval] 281.89 over 20 eps  (train avg: 272.19 | LR: 9.4e-05 | Ent: 0.0036)
+Ep 10400 | Steps  3565876 | Reward   283.93 | Avg(100):  271.29 | Best:  281.94 | LR: 9.3e-05 | Ent: 0.0036 | ETA: 49.4m
+Ep 10420 | Steps  3569569 | Reward   282.94 | Avg(100):  272.82 | Best:  281.94 | LR: 9.3e-05 | Ent: 0.0036 | ETA: 49.2m
+Ep 10440 | Steps  3573947 | Reward   277.39 | Avg(100):  263.99 | Best:  281.94 | LR: 9.3e-05 | Ent: 0.0036 | ETA: 49.1m
+Ep 10460 | Steps  3579566 | Reward   294.06 | Avg(100):  268.33 | Best:  281.94 | LR: 9.3e-05 | Ent: 0.0036 | ETA: 48.9m
+Ep 10480 | Steps  3583472 | Reward   306.77 | Avg(100):  267.38 | Best:  281.94 | LR: 9.2e-05 | Ent: 0.0036 | ETA: 48.8m
+Ep 10500 | Steps  3587152 | Reward   301.80 | Avg(100):  268.14 | Best:  281.94 | LR: 9.2e-05 | Ent: 0.0036 | ETA: 48.7m
+Ep 10520 | Steps  3592967 | Reward   148.40 | Avg(100):  264.52 | Best:  281.94 | LR: 9.2e-05 | Ent: 0.0035 | ETA: 48.5m
+Ep 10540 | Steps  3599485 | Reward   142.97 | Avg(100):  269.64 | Best:  281.94 | LR: 9.1e-05 | Ent: 0.0035 | ETA: 48.2m
+  [Greedy eval] 281.37 over 20 eps  (train avg: 268.12 | LR: 9.1e-05 | Ent: 0.0035)
+Ep 10560 | Steps  3605279 | Reward   132.77 | Avg(100):  266.51 | Best:  281.94 | LR: 9.1e-05 | Ent: 0.0035 | ETA: 48.1m
+Ep 10580 | Steps  3613927 | Reward   127.72 | Avg(100):  260.93 | Best:  281.94 | LR: 9.0e-05 | Ent: 0.0035 | ETA: 47.8m
+Ep 10600 | Steps  3622512 | Reward   300.47 | Avg(100):  250.24 | Best:  281.94 | LR: 9.0e-05 | Ent: 0.0035 | ETA: 47.6m
+Ep 10620 | Steps  3630485 | Reward   282.73 | Avg(100):  249.02 | Best:  281.94 | LR: 9.0e-05 | Ent: 0.0035 | ETA: 47.3m
+Ep 10640 | Steps  3639745 | Reward   122.53 | Avg(100):  238.85 | Best:  281.94 | LR: 8.9e-05 | Ent: 0.0035 | ETA: 47.0m
+  [Greedy eval] 280.04 over 20 eps  (train avg: 233.39 | LR: 8.9e-05 | Ent: 0.0035)
+Ep 10660 | Steps  3649139 | Reward   296.45 | Avg(100):  231.93 | Best:  281.94 | LR: 8.9e-05 | Ent: 0.0034 | ETA: 46.7m
+Ep 10680 | Steps  3660220 | Reward   121.25 | Avg(100):  231.41 | Best:  281.94 | LR: 8.8e-05 | Ent: 0.0034 | ETA: 46.3m
+Ep 10700 | Steps  3669151 | Reward   281.19 | Avg(100):  236.52 | Best:  281.94 | LR: 8.8e-05 | Ent: 0.0034 | ETA: 46.0m
+Ep 10720 | Steps  3678610 | Reward   136.28 | Avg(100):  232.06 | Best:  281.94 | LR: 8.7e-05 | Ent: 0.0034 | ETA: 45.8m
+Ep 10740 | Steps  3686311 | Reward   281.42 | Avg(100):  236.87 | Best:  281.94 | LR: 8.7e-05 | Ent: 0.0034 | ETA: 45.5m
+  [Greedy eval] 272.58 over 20 eps  (train avg: 236.87 | LR: 8.7e-05 | Ent: 0.0034)
+Ep 10760 | Steps  3694739 | Reward   302.32 | Avg(100):  240.51 | Best:  281.94 | LR: 8.6e-05 | Ent: 0.0033 | ETA: 45.2m
+Ep 10780 | Steps  3703681 | Reward   286.27 | Avg(100):  242.87 | Best:  281.94 | LR: 8.5e-05 | Ent: 0.0033 | ETA: 44.9m
+Ep 10800 | Steps  3710335 | Reward   255.75 | Avg(100):  243.21 | Best:  281.94 | LR: 8.5e-05 | Ent: 0.0033 | ETA: 44.7m
+Ep 10820 | Steps  3722612 | Reward   284.15 | Avg(100):  237.39 | Best:  281.94 | LR: 8.4e-05 | Ent: 0.0033 | ETA: 44.3m
+  [Greedy eval] 276.03 over 20 eps  (train avg: 235.97 | LR: 8.4e-05 | Ent: 0.0033)
+Ep 10840 | Steps  3730844 | Reward   247.08 | Avg(100):  237.76 | Best:  281.94 | LR: 8.4e-05 | Ent: 0.0033 | ETA: 44.1m
+Ep 10860 | Steps  3745634 | Reward   141.40 | Avg(100):  228.72 | Best:  281.94 | LR: 8.3e-05 | Ent: 0.0033 | ETA: 43.6m
+Ep 10880 | Steps  3756151 | Reward   308.63 | Avg(100):  225.17 | Best:  281.94 | LR: 8.2e-05 | Ent: 0.0032 | ETA: 43.2m
+  [Greedy eval] 274.04 over 20 eps  (train avg: 219.21 | LR: 8.2e-05 | Ent: 0.0032)
+Ep 10900 | Steps  3768540 | Reward   287.90 | Avg(100):  218.23 | Best:  281.94 | LR: 8.1e-05 | Ent: 0.0032 | ETA: 42.8m
+Ep 10920 | Steps  3782840 | Reward   293.43 | Avg(100):  218.29 | Best:  281.94 | LR: 8.1e-05 | Ent: 0.0032 | ETA: 42.3m
+Ep 10940 | Steps  3796438 | Reward   315.89 | Avg(100):  208.10 | Best:  281.94 | LR: 8.0e-05 | Ent: 0.0032 | ETA: 41.9m
+Ep 10960 | Steps  3806989 | Reward   294.54 | Avg(100):  213.81 | Best:  281.94 | LR: 8.0e-05 | Ent: 0.0032 | ETA: 41.5m
+  [Greedy eval] 263.83 over 20 eps  (train avg: 215.38 | LR: 8.0e-05 | Ent: 0.0032)
+Ep 10980 | Steps  3818485 | Reward   240.93 | Avg(100):  214.35 | Best:  281.94 | LR: 7.9e-05 | Ent: 0.0031 | ETA: 41.2m
+Ep 11000 | Steps  3833250 | Reward   164.10 | Avg(100):  211.19 | Best:  281.94 | LR: 7.8e-05 | Ent: 0.0031 | ETA: 40.7m
+Ep 11020 | Steps  3844933 | Reward   184.88 | Avg(100):  216.33 | Best:  281.94 | LR: 7.7e-05 | Ent: 0.0031 | ETA: 40.4m
+  [Greedy eval] 285.76 over 20 eps  (train avg: 216.25 | LR: 7.7e-05 | Ent: 0.0031)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 285.76)
+Ep 11040 | Steps  3857099 | Reward   277.32 | Avg(100):  219.74 | Best:  285.76 | LR: 7.7e-05 | Ent: 0.0031 | ETA: 40.0m
+Ep 11060 | Steps  3864737 | Reward   162.63 | Avg(100):  223.75 | Best:  285.76 | LR: 7.6e-05 | Ent: 0.0031 | ETA: 39.8m
+Ep 11080 | Steps  3877148 | Reward   156.33 | Avg(100):  222.15 | Best:  285.76 | LR: 7.5e-05 | Ent: 0.0030 | ETA: 39.4m
+  [Greedy eval] 260.69 over 20 eps  (train avg: 223.40 | LR: 7.5e-05 | Ent: 0.0030)
+Ep 11100 | Steps  3891892 | Reward   158.26 | Avg(100):  223.34 | Best:  285.76 | LR: 7.4e-05 | Ent: 0.0030 | ETA: 38.9m
+Ep 11120 | Steps  3903889 | Reward   277.69 | Avg(100):  227.06 | Best:  285.76 | LR: 7.4e-05 | Ent: 0.0030 | ETA: 38.5m
+Ep 11140 | Steps  3912878 | Reward   288.56 | Avg(100):  235.88 | Best:  285.76 | LR: 7.3e-05 | Ent: 0.0030 | ETA: 38.2m
+Ep 11160 | Steps  3924473 | Reward   299.85 | Avg(100):  233.14 | Best:  285.76 | LR: 7.2e-05 | Ent: 0.0029 | ETA: 37.8m
+  [Greedy eval] 277.05 over 20 eps  (train avg: 237.29 | LR: 7.2e-05 | Ent: 0.0029)
+Ep 11180 | Steps  3934443 | Reward   283.74 | Avg(100):  240.38 | Best:  285.76 | LR: 7.2e-05 | Ent: 0.0029 | ETA: 37.5m
+Ep 11200 | Steps  3945504 | Reward   293.75 | Avg(100):  250.33 | Best:  285.76 | LR: 7.1e-05 | Ent: 0.0029 | ETA: 37.1m
+Ep 11220 | Steps  3953610 | Reward   265.76 | Avg(100):  257.16 | Best:  285.76 | LR: 7.1e-05 | Ent: 0.0029 | ETA: 36.8m
+Ep 11240 | Steps  3962767 | Reward   263.94 | Avg(100):  257.56 | Best:  285.76 | LR: 7.1e-05 | Ent: 0.0029 | ETA: 36.5m
+Ep 11260 | Steps  3969678 | Reward   254.98 | Avg(100):  264.36 | Best:  285.76 | LR: 7.0e-05 | Ent: 0.0029 | ETA: 36.2m
+  [Greedy eval] 278.31 over 20 eps  (train avg: 265.59 | LR: 7.0e-05 | Ent: 0.0029)
+Ep 11280 | Steps  3975854 | Reward   300.84 | Avg(100):  268.71 | Best:  285.76 | LR: 7.0e-05 | Ent: 0.0028 | ETA: 36.0m
+Ep 11300 | Steps  3983241 | Reward   281.36 | Avg(100):  273.47 | Best:  285.76 | LR: 6.9e-05 | Ent: 0.0028 | ETA: 35.8m
+Ep 11320 | Steps  3989533 | Reward   284.02 | Avg(100):  271.97 | Best:  285.76 | LR: 6.9e-05 | Ent: 0.0028 | ETA: 35.5m
+Ep 11340 | Steps  3994965 | Reward   250.51 | Avg(100):  276.31 | Best:  285.76 | LR: 6.9e-05 | Ent: 0.0028 | ETA: 35.3m
+Ep 11360 | Steps  4001080 | Reward   288.19 | Avg(100):  276.20 | Best:  285.76 | LR: 6.8e-05 | Ent: 0.0028 | ETA: 35.1m
+Ep 11380 | Steps  4007159 | Reward   275.48 | Avg(100):  274.97 | Best:  285.76 | LR: 6.8e-05 | Ent: 0.0028 | ETA: 34.9m
+Ep 11400 | Steps  4013369 | Reward   283.87 | Avg(100):  276.19 | Best:  285.76 | LR: 6.8e-05 | Ent: 0.0028 | ETA: 34.7m
+  [Greedy eval] 271.54 over 20 eps  (train avg: 276.12 | LR: 6.8e-05 | Ent: 0.0028)
+Ep 11420 | Steps  4019745 | Reward   294.44 | Avg(100):  277.17 | Best:  285.76 | LR: 6.7e-05 | Ent: 0.0028 | ETA: 34.5m
+Ep 11440 | Steps  4024587 | Reward   303.41 | Avg(100):  276.93 | Best:  285.76 | LR: 6.7e-05 | Ent: 0.0028 | ETA: 34.3m
+Ep 11460 | Steps  4030685 | Reward   263.85 | Avg(100):  277.74 | Best:  285.76 | LR: 6.6e-05 | Ent: 0.0027 | ETA: 34.1m
+Ep 11480 | Steps  4035911 | Reward   278.51 | Avg(100):  278.46 | Best:  285.76 | LR: 6.6e-05 | Ent: 0.0027 | ETA: 33.9m
+Ep 11500 | Steps  4040783 | Reward   284.96 | Avg(100):  278.57 | Best:  285.76 | LR: 6.6e-05 | Ent: 0.0027 | ETA: 33.7m
+Ep 11520 | Steps  4045867 | Reward   270.44 | Avg(100):  279.18 | Best:  285.76 | LR: 6.6e-05 | Ent: 0.0027 | ETA: 33.5m
+Ep 11540 | Steps  4050905 | Reward   286.87 | Avg(100):  279.66 | Best:  285.76 | LR: 6.5e-05 | Ent: 0.0027 | ETA: 33.3m
+  [Greedy eval] 278.40 over 20 eps  (train avg: 280.43 | LR: 6.5e-05 | Ent: 0.0027)
+Ep 11560 | Steps  4056246 | Reward   290.38 | Avg(100):  280.53 | Best:  285.76 | LR: 6.5e-05 | Ent: 0.0027 | ETA: 33.2m
+Ep 11580 | Steps  4061886 | Reward   303.12 | Avg(100):  280.81 | Best:  285.76 | LR: 6.5e-05 | Ent: 0.0027 | ETA: 32.9m
+Ep 11600 | Steps  4067840 | Reward   244.79 | Avg(100):  281.70 | Best:  285.76 | LR: 6.4e-05 | Ent: 0.0027 | ETA: 32.7m
+Ep 11620 | Steps  4072499 | Reward   252.71 | Avg(100):  277.97 | Best:  285.76 | LR: 6.4e-05 | Ent: 0.0027 | ETA: 32.6m
+Ep 11640 | Steps  4077400 | Reward   293.41 | Avg(100):  277.77 | Best:  285.76 | LR: 6.4e-05 | Ent: 0.0027 | ETA: 32.4m
+Ep 11660 | Steps  4082586 | Reward   292.96 | Avg(100):  277.62 | Best:  285.76 | LR: 6.3e-05 | Ent: 0.0027 | ETA: 32.2m
+Ep 11680 | Steps  4087109 | Reward   289.52 | Avg(100):  277.77 | Best:  285.76 | LR: 6.3e-05 | Ent: 0.0027 | ETA: 32.1m
+Ep 11700 | Steps  4092065 | Reward   268.35 | Avg(100):  276.49 | Best:  285.76 | LR: 6.3e-05 | Ent: 0.0026 | ETA: 31.9m
+  [Greedy eval] 279.27 over 20 eps  (train avg: 277.88 | LR: 6.3e-05 | Ent: 0.0026)
+Ep 11720 | Steps  4097647 | Reward   306.93 | Avg(100):  280.98 | Best:  285.76 | LR: 6.2e-05 | Ent: 0.0026 | ETA: 31.8m
+Ep 11740 | Steps  4102653 | Reward   315.68 | Avg(100):  278.73 | Best:  285.76 | LR: 6.2e-05 | Ent: 0.0026 | ETA: 31.6m
+Ep 11760 | Steps  4107435 | Reward   254.94 | Avg(100):  277.70 | Best:  285.76 | LR: 6.2e-05 | Ent: 0.0026 | ETA: 31.4m
+Ep 11780 | Steps  4112009 | Reward   278.20 | Avg(100):  276.71 | Best:  285.76 | LR: 6.2e-05 | Ent: 0.0026 | ETA: 31.3m
+Ep 11800 | Steps  4116522 | Reward   304.46 | Avg(100):  277.46 | Best:  285.76 | LR: 6.1e-05 | Ent: 0.0026 | ETA: 31.1m
+Ep 11820 | Steps  4120742 | Reward   298.52 | Avg(100):  278.44 | Best:  285.76 | LR: 6.1e-05 | Ent: 0.0026 | ETA: 31.0m
+Ep 11840 | Steps  4124899 | Reward   289.84 | Avg(100):  281.60 | Best:  285.76 | LR: 6.1e-05 | Ent: 0.0026 | ETA: 30.8m
+Ep 11860 | Steps  4129834 | Reward   274.86 | Avg(100):  281.00 | Best:  285.76 | LR: 6.1e-05 | Ent: 0.0026 | ETA: 30.7m
+Ep 11880 | Steps  4134305 | Reward   273.17 | Avg(100):  280.85 | Best:  285.76 | LR: 6.1e-05 | Ent: 0.0026 | ETA: 30.5m
+  [Greedy eval] 281.61 over 20 eps  (train avg: 279.97 | LR: 6.1e-05 | Ent: 0.0026)
+Ep 11900 | Steps  4138477 | Reward   317.21 | Avg(100):  280.99 | Best:  285.76 | LR: 6.0e-05 | Ent: 0.0026 | ETA: 30.4m
+Ep 11920 | Steps  4143154 | Reward   293.54 | Avg(100):  278.47 | Best:  285.76 | LR: 6.0e-05 | Ent: 0.0026 | ETA: 30.2m
+Ep 11940 | Steps  4147727 | Reward   243.16 | Avg(100):  276.69 | Best:  285.76 | LR: 6.0e-05 | Ent: 0.0025 | ETA: 30.1m
+Ep 11960 | Steps  4152555 | Reward   267.30 | Avg(100):  277.49 | Best:  285.76 | LR: 6.0e-05 | Ent: 0.0025 | ETA: 29.9m
+Ep 11980 | Steps  4156989 | Reward   294.88 | Avg(100):  278.04 | Best:  285.76 | LR: 5.9e-05 | Ent: 0.0025 | ETA: 29.7m
+Ep 12000 | Steps  4161501 | Reward   279.56 | Avg(100):  278.16 | Best:  285.76 | LR: 5.9e-05 | Ent: 0.0025 | ETA: 29.6m
+Ep 12020 | Steps  4166039 | Reward   278.70 | Avg(100):  279.75 | Best:  285.76 | LR: 5.9e-05 | Ent: 0.0025 | ETA: 29.4m
+Ep 12040 | Steps  4170741 | Reward   306.06 | Avg(100):  281.42 | Best:  285.76 | LR: 5.8e-05 | Ent: 0.0025 | ETA: 29.3m
+Ep 12060 | Steps  4175751 | Reward   260.99 | Avg(100):  282.67 | Best:  285.76 | LR: 5.8e-05 | Ent: 0.0025 | ETA: 29.1m
+  [Greedy eval] 264.99 over 20 eps  (train avg: 282.61 | LR: 5.8e-05 | Ent: 0.0025)
+Ep 12080 | Steps  4181263 | Reward   290.01 | Avg(100):  280.27 | Best:  285.76 | LR: 5.8e-05 | Ent: 0.0025 | ETA: 28.9m
+Ep 12100 | Steps  4186495 | Reward   309.03 | Avg(100):  278.43 | Best:  285.76 | LR: 5.7e-05 | Ent: 0.0025 | ETA: 28.8m
+Ep 12120 | Steps  4191189 | Reward   259.31 | Avg(100):  277.92 | Best:  285.76 | LR: 5.7e-05 | Ent: 0.0025 | ETA: 28.6m
+Ep 12140 | Steps  4196046 | Reward   281.00 | Avg(100):  276.30 | Best:  285.76 | LR: 5.7e-05 | Ent: 0.0025 | ETA: 28.4m
+Ep 12160 | Steps  4200994 | Reward   164.74 | Avg(100):  275.88 | Best:  285.76 | LR: 5.7e-05 | Ent: 0.0025 | ETA: 28.2m
+Ep 12180 | Steps  4205234 | Reward   251.93 | Avg(100):  279.25 | Best:  285.76 | LR: 5.6e-05 | Ent: 0.0024 | ETA: 28.1m
+Ep 12200 | Steps  4209784 | Reward   297.69 | Avg(100):  281.14 | Best:  285.76 | LR: 5.6e-05 | Ent: 0.0024 | ETA: 27.9m
+Ep 12220 | Steps  4213890 | Reward   277.58 | Avg(100):  282.88 | Best:  285.76 | LR: 5.6e-05 | Ent: 0.0024 | ETA: 27.8m
+Ep 12240 | Steps  4218302 | Reward   291.51 | Avg(100):  283.28 | Best:  285.76 | LR: 5.6e-05 | Ent: 0.0024 | ETA: 27.6m
+  [Greedy eval] 264.08 over 20 eps  (train avg: 283.17 | LR: 5.6e-05 | Ent: 0.0024)
+Ep 12260 | Steps  4222889 | Reward   279.50 | Avg(100):  283.20 | Best:  285.76 | LR: 5.5e-05 | Ent: 0.0024 | ETA: 27.5m
+Ep 12280 | Steps  4227274 | Reward   285.50 | Avg(100):  282.94 | Best:  285.76 | LR: 5.5e-05 | Ent: 0.0024 | ETA: 27.3m
+Ep 12300 | Steps  4231151 | Reward   300.43 | Avg(100):  283.43 | Best:  285.76 | LR: 5.5e-05 | Ent: 0.0024 | ETA: 27.2m
+Ep 12320 | Steps  4235184 | Reward   284.49 | Avg(100):  281.73 | Best:  285.76 | LR: 5.5e-05 | Ent: 0.0024 | ETA: 27.0m
+Ep 12340 | Steps  4239413 | Reward   306.13 | Avg(100):  284.61 | Best:  285.76 | LR: 5.4e-05 | Ent: 0.0024 | ETA: 26.9m
+Ep 12360 | Steps  4245037 | Reward   276.13 | Avg(100):  284.14 | Best:  285.76 | LR: 5.4e-05 | Ent: 0.0024 | ETA: 26.7m
+Ep 12380 | Steps  4250140 | Reward   287.43 | Avg(100):  282.82 | Best:  285.76 | LR: 5.4e-05 | Ent: 0.0024 | ETA: 26.5m
+Ep 12400 | Steps  4254321 | Reward   316.30 | Avg(100):  282.78 | Best:  285.76 | LR: 5.3e-05 | Ent: 0.0023 | ETA: 26.4m
+Ep 12420 | Steps  4259059 | Reward   280.45 | Avg(100):  283.20 | Best:  285.76 | LR: 5.3e-05 | Ent: 0.0023 | ETA: 26.2m
+  [Greedy eval] 283.11 over 20 eps  (train avg: 282.75 | LR: 5.3e-05 | Ent: 0.0023)
+Ep 12440 | Steps  4262938 | Reward   308.76 | Avg(100):  279.72 | Best:  285.76 | LR: 5.3e-05 | Ent: 0.0023 | ETA: 26.1m
+Ep 12460 | Steps  4266979 | Reward   305.27 | Avg(100):  280.93 | Best:  285.76 | LR: 5.3e-05 | Ent: 0.0023 | ETA: 25.9m
+Ep 12480 | Steps  4271195 | Reward   307.48 | Avg(100):  282.70 | Best:  285.76 | LR: 5.2e-05 | Ent: 0.0023 | ETA: 25.8m
+Ep 12500 | Steps  4274889 | Reward   277.57 | Avg(100):  281.40 | Best:  285.76 | LR: 5.2e-05 | Ent: 0.0023 | ETA: 25.7m
+Ep 12520 | Steps  4278831 | Reward   307.31 | Avg(100):  282.23 | Best:  285.76 | LR: 5.2e-05 | Ent: 0.0023 | ETA: 25.5m
+Ep 12540 | Steps  4282676 | Reward   252.32 | Avg(100):  283.75 | Best:  285.76 | LR: 5.2e-05 | Ent: 0.0023 | ETA: 25.4m
+Ep 12560 | Steps  4287545 | Reward   279.53 | Avg(100):  283.57 | Best:  285.76 | LR: 5.2e-05 | Ent: 0.0023 | ETA: 25.2m
+Ep 12580 | Steps  4291650 | Reward   284.78 | Avg(100):  281.48 | Best:  285.76 | LR: 5.2e-05 | Ent: 0.0023 | ETA: 25.1m
+Ep 12600 | Steps  4295893 | Reward   284.30 | Avg(100):  283.19 | Best:  285.76 | LR: 5.1e-05 | Ent: 0.0023 | ETA: 24.9m
+Ep 12620 | Steps  4300609 | Reward   273.11 | Avg(100):  278.02 | Best:  285.76 | LR: 5.1e-05 | Ent: 0.0023 | ETA: 24.8m
+  [Greedy eval] 292.36 over 20 eps  (train avg: 277.68 | LR: 5.1e-05 | Ent: 0.0023)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 292.36)
+Ep 12640 | Steps  4305421 | Reward   297.21 | Avg(100):  278.29 | Best:  292.36 | LR: 5.1e-05 | Ent: 0.0023 | ETA: 24.6m
+Ep 12660 | Steps  4309928 | Reward   290.11 | Avg(100):  276.97 | Best:  292.36 | LR: 5.0e-05 | Ent: 0.0022 | ETA: 24.5m
+Ep 12680 | Steps  4315654 | Reward   144.88 | Avg(100):  278.85 | Best:  292.36 | LR: 5.0e-05 | Ent: 0.0022 | ETA: 24.3m
+Ep 12700 | Steps  4319823 | Reward   295.59 | Avg(100):  278.03 | Best:  292.36 | LR: 5.0e-05 | Ent: 0.0022 | ETA: 24.1m
+Ep 12720 | Steps  4324190 | Reward   270.19 | Avg(100):  283.25 | Best:  292.36 | LR: 5.0e-05 | Ent: 0.0022 | ETA: 24.0m
+Ep 12740 | Steps  4328194 | Reward   286.75 | Avg(100):  283.78 | Best:  292.36 | LR: 4.9e-05 | Ent: 0.0022 | ETA: 23.8m
+Ep 12760 | Steps  4332152 | Reward   308.03 | Avg(100):  286.15 | Best:  292.36 | LR: 4.9e-05 | Ent: 0.0022 | ETA: 23.7m
+Ep 12780 | Steps  4336194 | Reward   264.70 | Avg(100):  287.22 | Best:  292.36 | LR: 4.9e-05 | Ent: 0.0022 | ETA: 23.5m
+Ep 12800 | Steps  4341443 | Reward   285.47 | Avg(100):  285.80 | Best:  292.36 | LR: 4.9e-05 | Ent: 0.0022 | ETA: 23.3m
+  [Greedy eval] 288.46 over 20 eps  (train avg: 285.74 | LR: 4.9e-05 | Ent: 0.0022)
+Ep 12820 | Steps  4346897 | Reward   267.54 | Avg(100):  284.36 | Best:  292.36 | LR: 4.8e-05 | Ent: 0.0022 | ETA: 23.1m
+Ep 12840 | Steps  4351427 | Reward   287.03 | Avg(100):  282.18 | Best:  292.36 | LR: 4.8e-05 | Ent: 0.0022 | ETA: 23.0m
+Ep 12860 | Steps  4356120 | Reward   291.95 | Avg(100):  281.61 | Best:  292.36 | LR: 4.8e-05 | Ent: 0.0022 | ETA: 22.8m
+Ep 12880 | Steps  4360598 | Reward   294.75 | Avg(100):  280.81 | Best:  292.36 | LR: 4.7e-05 | Ent: 0.0022 | ETA: 22.6m
+Ep 12900 | Steps  4364536 | Reward   282.70 | Avg(100):  282.10 | Best:  292.36 | LR: 4.7e-05 | Ent: 0.0022 | ETA: 22.5m
+Ep 12920 | Steps  4368987 | Reward   276.29 | Avg(100):  282.35 | Best:  292.36 | LR: 4.7e-05 | Ent: 0.0021 | ETA: 22.3m
+Ep 12940 | Steps  4373045 | Reward   297.28 | Avg(100):  282.37 | Best:  292.36 | LR: 4.7e-05 | Ent: 0.0021 | ETA: 22.2m
+Ep 12960 | Steps  4377693 | Reward   299.25 | Avg(100):  279.90 | Best:  292.36 | LR: 4.6e-05 | Ent: 0.0021 | ETA: 22.0m
+Ep 12980 | Steps  4382100 | Reward   267.45 | Avg(100):  280.41 | Best:  292.36 | LR: 4.6e-05 | Ent: 0.0021 | ETA: 21.8m
+  [Greedy eval] 272.30 over 20 eps  (train avg: 279.63 | LR: 4.6e-05 | Ent: 0.0021)
+Ep 13000 | Steps  4385859 | Reward   252.37 | Avg(100):  279.25 | Best:  292.36 | LR: 4.6e-05 | Ent: 0.0021 | ETA: 21.7m
+Ep 13020 | Steps  4389828 | Reward   306.41 | Avg(100):  280.82 | Best:  292.36 | LR: 4.6e-05 | Ent: 0.0021 | ETA: 21.6m
+Ep 13040 | Steps  4393920 | Reward   249.04 | Avg(100):  281.79 | Best:  292.36 | LR: 4.5e-05 | Ent: 0.0021 | ETA: 21.4m
+Ep 13060 | Steps  4398662 | Reward   294.24 | Avg(100):  283.06 | Best:  292.36 | LR: 4.5e-05 | Ent: 0.0021 | ETA: 21.3m
+Ep 13080 | Steps  4402789 | Reward   302.79 | Avg(100):  283.04 | Best:  292.36 | LR: 4.5e-05 | Ent: 0.0021 | ETA: 21.1m
+Ep 13100 | Steps  4406511 | Reward   261.72 | Avg(100):  283.12 | Best:  292.36 | LR: 4.5e-05 | Ent: 0.0021 | ETA: 21.0m
+Ep 13120 | Steps  4410335 | Reward   253.18 | Avg(100):  281.14 | Best:  292.36 | LR: 4.4e-05 | Ent: 0.0021 | ETA: 20.8m
+Ep 13140 | Steps  4414162 | Reward   295.13 | Avg(100):  282.31 | Best:  292.36 | LR: 4.4e-05 | Ent: 0.0021 | ETA: 20.7m
+Ep 13160 | Steps  4418659 | Reward   278.61 | Avg(100):  282.06 | Best:  292.36 | LR: 4.4e-05 | Ent: 0.0021 | ETA: 20.5m
+Ep 13180 | Steps  4422367 | Reward   303.05 | Avg(100):  281.14 | Best:  292.36 | LR: 4.4e-05 | Ent: 0.0021 | ETA: 20.4m
+  [Greedy eval] 288.10 over 20 eps  (train avg: 281.41 | LR: 4.4e-05 | Ent: 0.0021)
+Ep 13200 | Steps  4426121 | Reward   254.09 | Avg(100):  282.41 | Best:  292.36 | LR: 4.3e-05 | Ent: 0.0020 | ETA: 20.3m
+Ep 13220 | Steps  4430035 | Reward   278.53 | Avg(100):  284.25 | Best:  292.36 | LR: 4.3e-05 | Ent: 0.0020 | ETA: 20.1m
+Ep 13240 | Steps  4433859 | Reward   299.76 | Avg(100):  283.81 | Best:  292.36 | LR: 4.3e-05 | Ent: 0.0020 | ETA: 20.0m
+Ep 13260 | Steps  4438542 | Reward   253.02 | Avg(100):  284.22 | Best:  292.36 | LR: 4.3e-05 | Ent: 0.0020 | ETA: 19.8m
+Ep 13280 | Steps  4443228 | Reward   280.84 | Avg(100):  284.68 | Best:  292.36 | LR: 4.2e-05 | Ent: 0.0020 | ETA: 19.7m
+Ep 13300 | Steps  4448982 | Reward   246.86 | Avg(100):  281.72 | Best:  292.36 | LR: 4.2e-05 | Ent: 0.0020 | ETA: 19.5m
+Ep 13320 | Steps  4452895 | Reward   263.50 | Avg(100):  281.55 | Best:  292.36 | LR: 4.2e-05 | Ent: 0.0020 | ETA: 19.3m
+Ep 13340 | Steps  4456801 | Reward   294.12 | Avg(100):  281.71 | Best:  292.36 | LR: 4.2e-05 | Ent: 0.0020 | ETA: 19.2m
+Ep 13360 | Steps  4461590 | Reward   252.46 | Avg(100):  281.22 | Best:  292.36 | LR: 4.2e-05 | Ent: 0.0020 | ETA: 19.0m
+  [Greedy eval] 283.37 over 20 eps  (train avg: 280.05 | LR: 4.2e-05 | Ent: 0.0020)
+Ep 13380 | Steps  4465362 | Reward   312.61 | Avg(100):  281.08 | Best:  292.36 | LR: 4.1e-05 | Ent: 0.0020 | ETA: 18.9m
+Ep 13400 | Steps  4470783 | Reward   268.13 | Avg(100):  282.05 | Best:  292.36 | LR: 4.1e-05 | Ent: 0.0020 | ETA: 18.7m
+Ep 13420 | Steps  4474448 | Reward   295.45 | Avg(100):  281.82 | Best:  292.36 | LR: 4.1e-05 | Ent: 0.0019 | ETA: 18.5m
+Ep 13440 | Steps  4478359 | Reward   304.43 | Avg(100):  282.15 | Best:  292.36 | LR: 4.1e-05 | Ent: 0.0019 | ETA: 18.4m
+Ep 13460 | Steps  4482335 | Reward   305.29 | Avg(100):  284.18 | Best:  292.36 | LR: 4.0e-05 | Ent: 0.0019 | ETA: 18.3m
+Ep 13480 | Steps  4486982 | Reward   302.37 | Avg(100):  284.15 | Best:  292.36 | LR: 4.0e-05 | Ent: 0.0019 | ETA: 18.1m
+Ep 13500 | Steps  4490901 | Reward   292.30 | Avg(100):  286.18 | Best:  292.36 | LR: 4.0e-05 | Ent: 0.0019 | ETA: 17.9m
+Ep 13520 | Steps  4494624 | Reward   297.37 | Avg(100):  286.33 | Best:  292.36 | LR: 4.0e-05 | Ent: 0.0019 | ETA: 17.8m
+Ep 13540 | Steps  4499648 | Reward   276.04 | Avg(100):  285.71 | Best:  292.36 | LR: 3.9e-05 | Ent: 0.0019 | ETA: 17.6m
+Ep 13560 | Steps  4503504 | Reward   270.80 | Avg(100):  284.60 | Best:  292.36 | LR: 3.9e-05 | Ent: 0.0019 | ETA: 17.5m
+  [Greedy eval] 281.81 over 20 eps  (train avg: 284.69 | LR: 3.9e-05 | Ent: 0.0019)
+Ep 13580 | Steps  4507448 | Reward   251.80 | Avg(100):  285.56 | Best:  292.36 | LR: 3.9e-05 | Ent: 0.0019 | ETA: 17.3m
+Ep 13600 | Steps  4511279 | Reward   312.54 | Avg(100):  286.34 | Best:  292.36 | LR: 3.9e-05 | Ent: 0.0019 | ETA: 17.2m
+Ep 13620 | Steps  4515987 | Reward   258.08 | Avg(100):  285.53 | Best:  292.36 | LR: 3.8e-05 | Ent: 0.0019 | ETA: 17.0m
+Ep 13640 | Steps  4519826 | Reward   317.44 | Avg(100):  287.38 | Best:  292.36 | LR: 3.8e-05 | Ent: 0.0019 | ETA: 16.9m
+Ep 13660 | Steps  4525102 | Reward   266.87 | Avg(100):  285.78 | Best:  292.36 | LR: 3.8e-05 | Ent: 0.0019 | ETA: 16.7m
+Ep 13680 | Steps  4529066 | Reward   303.61 | Avg(100):  284.66 | Best:  292.36 | LR: 3.8e-05 | Ent: 0.0019 | ETA: 16.6m
+Ep 13700 | Steps  4532814 | Reward   300.40 | Avg(100):  284.92 | Best:  292.36 | LR: 3.7e-05 | Ent: 0.0018 | ETA: 16.5m
+Ep 13720 | Steps  4536565 | Reward   248.09 | Avg(100):  284.36 | Best:  292.36 | LR: 3.7e-05 | Ent: 0.0018 | ETA: 16.3m
+Ep 13740 | Steps  4540484 | Reward   262.10 | Avg(100):  283.31 | Best:  292.36 | LR: 3.7e-05 | Ent: 0.0018 | ETA: 16.2m
+Ep 13760 | Steps  4544333 | Reward   292.54 | Avg(100):  286.00 | Best:  292.36 | LR: 3.7e-05 | Ent: 0.0018 | ETA: 16.1m
+  [Greedy eval] 279.96 over 20 eps  (train avg: 287.35 | LR: 3.7e-05 | Ent: 0.0018)
+Ep 13780 | Steps  4547899 | Reward   263.08 | Avg(100):  286.44 | Best:  292.36 | LR: 3.6e-05 | Ent: 0.0018 | ETA: 15.9m
+Ep 13800 | Steps  4551606 | Reward   277.51 | Avg(100):  285.06 | Best:  292.36 | LR: 3.6e-05 | Ent: 0.0018 | ETA: 15.8m
+Ep 13820 | Steps  4555191 | Reward   294.22 | Avg(100):  285.51 | Best:  292.36 | LR: 3.6e-05 | Ent: 0.0018 | ETA: 15.7m
+Ep 13840 | Steps  4559021 | Reward   300.87 | Avg(100):  285.74 | Best:  292.36 | LR: 3.6e-05 | Ent: 0.0018 | ETA: 15.5m
+Ep 13860 | Steps  4562829 | Reward   283.41 | Avg(100):  285.63 | Best:  292.36 | LR: 3.6e-05 | Ent: 0.0018 | ETA: 15.4m
+Ep 13880 | Steps  4566660 | Reward   258.66 | Avg(100):  285.44 | Best:  292.36 | LR: 3.5e-05 | Ent: 0.0018 | ETA: 15.3m
+Ep 13900 | Steps  4570428 | Reward   277.23 | Avg(100):  284.72 | Best:  292.36 | LR: 3.5e-05 | Ent: 0.0018 | ETA: 15.1m
+Ep 13920 | Steps  4574219 | Reward   241.07 | Avg(100):  285.30 | Best:  292.36 | LR: 3.5e-05 | Ent: 0.0018 | ETA: 15.0m
+Ep 13940 | Steps  4578017 | Reward   283.98 | Avg(100):  284.82 | Best:  292.36 | LR: 3.5e-05 | Ent: 0.0018 | ETA: 14.9m
+Ep 13960 | Steps  4581658 | Reward   316.60 | Avg(100):  284.19 | Best:  292.36 | LR: 3.4e-05 | Ent: 0.0018 | ETA: 14.8m
+Ep 13980 | Steps  4585394 | Reward   312.31 | Avg(100):  285.51 | Best:  292.36 | LR: 3.4e-05 | Ent: 0.0018 | ETA: 14.6m
+  [Greedy eval] 292.88 over 20 eps  (train avg: 286.27 | LR: 3.4e-05 | Ent: 0.0018)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 292.88)
+Ep 14000 | Steps  4589242 | Reward   300.28 | Avg(100):  287.33 | Best:  292.88 | LR: 3.4e-05 | Ent: 0.0017 | ETA: 14.5m
+Ep 14020 | Steps  4593051 | Reward   264.51 | Avg(100):  287.51 | Best:  292.88 | LR: 3.4e-05 | Ent: 0.0017 | ETA: 14.4m
+Ep 14040 | Steps  4596704 | Reward   312.64 | Avg(100):  287.22 | Best:  292.88 | LR: 3.3e-05 | Ent: 0.0017 | ETA: 14.2m
+Ep 14060 | Steps  4600392 | Reward   310.06 | Avg(100):  287.88 | Best:  292.88 | LR: 3.3e-05 | Ent: 0.0017 | ETA: 14.1m
+Ep 14080 | Steps  4604009 | Reward   254.16 | Avg(100):  286.95 | Best:  292.88 | LR: 3.3e-05 | Ent: 0.0017 | ETA: 14.0m
+Ep 14100 | Steps  4607574 | Reward   286.25 | Avg(100):  284.75 | Best:  292.88 | LR: 3.3e-05 | Ent: 0.0017 | ETA: 13.9m
+Ep 14120 | Steps  4611499 | Reward   308.40 | Avg(100):  285.35 | Best:  292.88 | LR: 3.3e-05 | Ent: 0.0017 | ETA: 13.7m
+Ep 14140 | Steps  4615343 | Reward   308.94 | Avg(100):  285.80 | Best:  292.88 | LR: 3.2e-05 | Ent: 0.0017 | ETA: 13.6m
+Ep 14160 | Steps  4619029 | Reward   274.18 | Avg(100):  284.80 | Best:  292.88 | LR: 3.2e-05 | Ent: 0.0017 | ETA: 13.5m
+Ep 14180 | Steps  4622761 | Reward   314.29 | Avg(100):  284.40 | Best:  292.88 | LR: 3.2e-05 | Ent: 0.0017 | ETA: 13.3m
+Ep 14200 | Steps  4626468 | Reward   245.85 | Avg(100):  286.45 | Best:  292.88 | LR: 3.2e-05 | Ent: 0.0017 | ETA: 13.2m
+  [Greedy eval] 293.19 over 20 eps  (train avg: 284.96 | LR: 3.2e-05 | Ent: 0.0017)
+  ✓ New best saved → policy_v3.npy  (greedy avg = 293.19)
+Ep 14220 | Steps  4630270 | Reward   288.88 | Avg(100):  286.16 | Best:  293.19 | LR: 3.2e-05 | Ent: 0.0017 | ETA: 13.1m
+Ep 14240 | Steps  4633994 | Reward   293.79 | Avg(100):  285.49 | Best:  293.19 | LR: 3.2e-05 | Ent: 0.0017 | ETA: 12.9m
+Ep 14260 | Steps  4637603 | Reward   278.26 | Avg(100):  286.34 | Best:  293.19 | LR: 3.1e-05 | Ent: 0.0017 | ETA: 12.8m
+Ep 14280 | Steps  4641339 | Reward   284.44 | Avg(100):  287.92 | Best:  293.19 | LR: 3.1e-05 | Ent: 0.0017 | ETA: 12.7m
+Ep 14300 | Steps  4645006 | Reward   260.07 | Avg(100):  287.05 | Best:  293.19 | LR: 3.1e-05 | Ent: 0.0016 | ETA: 12.6m
+Ep 14320 | Steps  4648874 | Reward   306.84 | Avg(100):  287.23 | Best:  293.19 | LR: 3.1e-05 | Ent: 0.0016 | ETA: 12.4m
+Ep 14340 | Steps  4652693 | Reward   302.65 | Avg(100):  287.97 | Best:  293.19 | LR: 3.1e-05 | Ent: 0.0016 | ETA: 12.3m
+Ep 14360 | Steps  4656310 | Reward   264.84 | Avg(100):  286.52 | Best:  293.19 | LR: 3.0e-05 | Ent: 0.0016 | ETA: 12.2m
+Ep 14380 | Steps  4659969 | Reward   274.79 | Avg(100):  286.04 | Best:  293.19 | LR: 3.0e-05 | Ent: 0.0016 | ETA: 12.0m
+Ep 14400 | Steps  4663571 | Reward   259.88 | Avg(100):  285.82 | Best:  293.19 | LR: 3.0e-05 | Ent: 0.0016 | ETA: 11.9m
+Ep 14420 | Steps  4667012 | Reward   267.41 | Avg(100):  283.60 | Best:  293.19 | LR: 3.0e-05 | Ent: 0.0016 | ETA: 11.8m
+  [Greedy eval] 288.30 over 20 eps  (train avg: 283.82 | LR: 3.0e-05 | Ent: 0.0016)
+Ep 14440 | Steps  4670524 | Reward   279.49 | Avg(100):  283.35 | Best:  293.19 | LR: 2.9e-05 | Ent: 0.0016 | ETA: 11.7m
+Ep 14460 | Steps  4674152 | Reward   279.30 | Avg(100):  282.97 | Best:  293.19 | LR: 2.9e-05 | Ent: 0.0016 | ETA: 11.5m
+Ep 14480 | Steps  4677583 | Reward   276.89 | Avg(100):  281.45 | Best:  293.19 | LR: 2.9e-05 | Ent: 0.0016 | ETA: 11.4m
+Ep 14500 | Steps  4682146 | Reward   241.29 | Avg(100):  281.71 | Best:  293.19 | LR: 2.9e-05 | Ent: 0.0016 | ETA: 11.3m
+Ep 14520 | Steps  4685851 | Reward   307.86 | Avg(100):  282.85 | Best:  293.19 | LR: 2.8e-05 | Ent: 0.0016 | ETA: 11.1m
+Ep 14540 | Steps  4689619 | Reward   324.31 | Avg(100):  282.93 | Best:  293.19 | LR: 2.8e-05 | Ent: 0.0016 | ETA: 11.0m
+Ep 14560 | Steps  4693218 | Reward   287.31 | Avg(100):  282.89 | Best:  293.19 | LR: 2.8e-05 | Ent: 0.0016 | ETA: 10.9m
+Ep 14580 | Steps  4696985 | Reward   257.24 | Avg(100):  284.05 | Best:  293.19 | LR: 2.8e-05 | Ent: 0.0016 | ETA: 10.7m
+Ep 14600 | Steps  4701664 | Reward   210.91 | Avg(100):  283.36 | Best:  293.19 | LR: 2.8e-05 | Ent: 0.0016 | ETA: 10.6m
+Ep 14620 | Steps  4705200 | Reward   265.09 | Avg(100):  283.36 | Best:  293.19 | LR: 2.7e-05 | Ent: 0.0015 | ETA: 10.5m
+Ep 14640 | Steps  4708884 | Reward   281.64 | Avg(100):  283.48 | Best:  293.19 | LR: 2.7e-05 | Ent: 0.0015 | ETA: 10.3m
+  [Greedy eval] 284.69 over 20 eps  (train avg: 283.29 | LR: 2.7e-05 | Ent: 0.0015)
+Ep 14660 | Steps  4712631 | Reward   294.72 | Avg(100):  285.98 | Best:  293.19 | LR: 2.7e-05 | Ent: 0.0015 | ETA: 10.2m
+Ep 14680 | Steps  4716171 | Reward   292.55 | Avg(100):  285.29 | Best:  293.19 | LR: 2.7e-05 | Ent: 0.0015 | ETA: 10.1m
+Ep 14700 | Steps  4719856 | Reward   311.64 | Avg(100):  286.16 | Best:  293.19 | LR: 2.6e-05 | Ent: 0.0015 | ETA: 9.9m
+Ep 14720 | Steps  4723403 | Reward   310.02 | Avg(100):  286.74 | Best:  293.19 | LR: 2.6e-05 | Ent: 0.0015 | ETA: 9.8m
+Ep 14740 | Steps  4727079 | Reward   300.79 | Avg(100):  287.19 | Best:  293.19 | LR: 2.6e-05 | Ent: 0.0015 | ETA: 9.7m
+Ep 14760 | Steps  4730415 | Reward   296.74 | Avg(100):  284.31 | Best:  293.19 | LR: 2.6e-05 | Ent: 0.0015 | ETA: 9.6m
+Ep 14780 | Steps  4734055 | Reward   281.07 | Avg(100):  284.88 | Best:  293.19 | LR: 2.6e-05 | Ent: 0.0015 | ETA: 9.4m
+Ep 14800 | Steps  4737773 | Reward   294.53 | Avg(100):  286.56 | Best:  293.19 | LR: 2.5e-05 | Ent: 0.0015 | ETA: 9.3m
+Ep 14820 | Steps  4741331 | Reward   258.19 | Avg(100):  285.88 | Best:  293.19 | LR: 2.5e-05 | Ent: 0.0015 | ETA: 9.2m
+Ep 14840 | Steps  4744962 | Reward   269.38 | Avg(100):  284.84 | Best:  293.19 | LR: 2.5e-05 | Ent: 0.0015 | ETA: 9.1m
+Ep 14860 | Steps  4748600 | Reward   244.55 | Avg(100):  284.15 | Best:  293.19 | LR: 2.5e-05 | Ent: 0.0015 | ETA: 8.9m
+  [Greedy eval] 290.34 over 20 eps  (train avg: 283.13 | LR: 2.5e-05 | Ent: 0.0015)
+Ep 14880 | Steps  4752150 | Reward   307.89 | Avg(100):  282.77 | Best:  293.19 | LR: 2.4e-05 | Ent: 0.0014 | ETA: 8.8m
+Ep 14900 | Steps  4755913 | Reward   287.81 | Avg(100):  281.22 | Best:  293.19 | LR: 2.4e-05 | Ent: 0.0014 | ETA: 8.7m
+Ep 14920 | Steps  4759639 | Reward   280.74 | Avg(100):  282.91 | Best:  293.19 | LR: 2.4e-05 | Ent: 0.0014 | ETA: 8.5m
+Ep 14940 | Steps  4763407 | Reward   298.54 | Avg(100):  284.24 | Best:  293.19 | LR: 2.4e-05 | Ent: 0.0014 | ETA: 8.4m
+Ep 14960 | Steps  4767114 | Reward   293.34 | Avg(100):  287.97 | Best:  293.19 | LR: 2.4e-05 | Ent: 0.0014 | ETA: 8.3m
+Ep 14980 | Steps  4771613 | Reward   278.95 | Avg(100):  288.60 | Best:  293.19 | LR: 2.3e-05 | Ent: 0.0014 | ETA: 8.1m
+Ep 15000 | Steps  4775255 | Reward   317.83 | Avg(100):  286.10 | Best:  293.19 | LR: 2.3e-05 | Ent: 0.0014 | ETA: 8.0m
+Ep 15020 | Steps  4779077 | Reward   242.90 | Avg(100):  282.43 | Best:  293.19 | LR: 2.3e-05 | Ent: 0.0014 | ETA: 7.9m
+Ep 15040 | Steps  4783677 | Reward   285.35 | Avg(100):  280.00 | Best:  293.19 | LR: 2.3e-05 | Ent: 0.0014 | ETA: 7.7m
+Ep 15060 | Steps  4787945 | Reward   279.02 | Avg(100):  278.71 | Best:  293.19 | LR: 2.3e-05 | Ent: 0.0014 | ETA: 7.5m
+  [Greedy eval] 285.70 over 20 eps  (train avg: 278.61 | LR: 2.3e-05 | Ent: 0.0014)
+Ep 15080 | Steps  4792582 | Reward   278.47 | Avg(100):  278.60 | Best:  293.19 | LR: 2.2e-05 | Ent: 0.0014 | ETA: 7.4m
+Ep 15100 | Steps  4796685 | Reward   280.72 | Avg(100):  280.93 | Best:  293.19 | LR: 2.2e-05 | Ent: 0.0014 | ETA: 7.2m
+Ep 15120 | Steps  4800367 | Reward   298.81 | Avg(100):  283.44 | Best:  293.19 | LR: 2.2e-05 | Ent: 0.0014 | ETA: 7.1m
+Ep 15140 | Steps  4805367 | Reward   253.36 | Avg(100):  283.28 | Best:  293.19 | LR: 2.2e-05 | Ent: 0.0014 | ETA: 6.9m
+Ep 15160 | Steps  4810372 | Reward   269.70 | Avg(100):  281.94 | Best:  293.19 | LR: 2.1e-05 | Ent: 0.0013 | ETA: 6.8m
+Ep 15180 | Steps  4815457 | Reward   281.52 | Avg(100):  282.51 | Best:  293.19 | LR: 2.1e-05 | Ent: 0.0013 | ETA: 6.6m
+Ep 15200 | Steps  4821064 | Reward   278.56 | Avg(100):  281.48 | Best:  293.19 | LR: 2.1e-05 | Ent: 0.0013 | ETA: 6.4m
+Ep 15220 | Steps  4826322 | Reward   307.76 | Avg(100):  282.52 | Best:  293.19 | LR: 2.0e-05 | Ent: 0.0013 | ETA: 6.2m
+Ep 15240 | Steps  4831389 | Reward   274.70 | Avg(100):  280.57 | Best:  293.19 | LR: 2.0e-05 | Ent: 0.0013 | ETA: 6.0m
+  [Greedy eval] 283.71 over 20 eps  (train avg: 280.64 | LR: 2.0e-05 | Ent: 0.0013)
+Ep 15260 | Steps  4835873 | Reward   290.63 | Avg(100):  282.59 | Best:  293.19 | LR: 2.0e-05 | Ent: 0.0013 | ETA: 5.9m
+Ep 15280 | Steps  4840074 | Reward   250.66 | Avg(100):  283.29 | Best:  293.19 | LR: 2.0e-05 | Ent: 0.0013 | ETA: 5.7m
+Ep 15300 | Steps  4844596 | Reward   277.77 | Avg(100):  284.37 | Best:  293.19 | LR: 1.9e-05 | Ent: 0.0013 | ETA: 5.5m
+Ep 15320 | Steps  4848103 | Reward   281.21 | Avg(100):  282.17 | Best:  293.19 | LR: 1.9e-05 | Ent: 0.0013 | ETA: 5.4m
+Ep 15340 | Steps  4852422 | Reward   253.13 | Avg(100):  285.67 | Best:  293.19 | LR: 1.9e-05 | Ent: 0.0013 | ETA: 5.3m
+Ep 15360 | Steps  4857400 | Reward   274.02 | Avg(100):  285.02 | Best:  293.19 | LR: 1.9e-05 | Ent: 0.0013 | ETA: 5.1m
+Ep 15380 | Steps  4860915 | Reward   283.86 | Avg(100):  280.28 | Best:  293.19 | LR: 1.8e-05 | Ent: 0.0013 | ETA: 5.0m
+Ep 15400 | Steps  4864966 | Reward   302.80 | Avg(100):  279.81 | Best:  293.19 | LR: 1.8e-05 | Ent: 0.0013 | ETA: 4.8m
+Ep 15420 | Steps  4869438 | Reward   261.12 | Avg(100):  281.30 | Best:  293.19 | LR: 1.8e-05 | Ent: 0.0012 | ETA: 4.7m
+  [Greedy eval] 288.82 over 20 eps  (train avg: 281.12 | LR: 1.8e-05 | Ent: 0.0012)
+Ep 15440 | Steps  4874734 | Reward   246.29 | Avg(100):  281.02 | Best:  293.19 | LR: 1.7e-05 | Ent: 0.0012 | ETA: 4.5m
+Ep 15460 | Steps  4878937 | Reward   278.00 | Avg(100):  275.33 | Best:  293.19 | LR: 1.7e-05 | Ent: 0.0012 | ETA: 4.3m
+Ep 15480 | Steps  4883098 | Reward   309.15 | Avg(100):  281.25 | Best:  293.19 | LR: 1.7e-05 | Ent: 0.0012 | ETA: 4.2m
+Ep 15500 | Steps  4887429 | Reward   303.83 | Avg(100):  282.54 | Best:  293.19 | LR: 1.7e-05 | Ent: 0.0012 | ETA: 4.0m
+Ep 15520 | Steps  4892239 | Reward   254.75 | Avg(100):  281.43 | Best:  293.19 | LR: 1.6e-05 | Ent: 0.0012 | ETA: 3.9m
+Ep 15540 | Steps  4896759 | Reward   285.53 | Avg(100):  282.81 | Best:  293.19 | LR: 1.6e-05 | Ent: 0.0012 | ETA: 3.7m
+Ep 15560 | Steps  4900643 | Reward   287.78 | Avg(100):  287.60 | Best:  293.19 | LR: 1.6e-05 | Ent: 0.0012 | ETA: 3.6m
+Ep 15580 | Steps  4905001 | Reward   281.60 | Avg(100):  284.64 | Best:  293.19 | LR: 1.6e-05 | Ent: 0.0012 | ETA: 3.4m
+Ep 15600 | Steps  4909378 | Reward   259.96 | Avg(100):  282.66 | Best:  293.19 | LR: 1.5e-05 | Ent: 0.0012 | ETA: 3.2m
+Ep 15620 | Steps  4913613 | Reward   270.66 | Avg(100):  283.38 | Best:  293.19 | LR: 1.5e-05 | Ent: 0.0012 | ETA: 3.1m
+  [Greedy eval] 287.75 over 20 eps  (train avg: 282.87 | LR: 1.5e-05 | Ent: 0.0012)
+Ep 15640 | Steps  4917285 | Reward   297.52 | Avg(100):  282.67 | Best:  293.19 | LR: 1.5e-05 | Ent: 0.0012 | ETA: 3.0m
+Ep 15660 | Steps  4921977 | Reward   310.70 | Avg(100):  281.52 | Best:  293.19 | LR: 1.5e-05 | Ent: 0.0012 | ETA: 2.8m
+Ep 15680 | Steps  4927123 | Reward   229.09 | Avg(100):  282.08 | Best:  293.19 | LR: 1.4e-05 | Ent: 0.0011 | ETA: 2.6m
+Ep 15700 | Steps  4931664 | Reward   260.35 | Avg(100):  282.30 | Best:  293.19 | LR: 1.4e-05 | Ent: 0.0011 | ETA: 2.4m
+Ep 15720 | Steps  4935989 | Reward   252.38 | Avg(100):  282.51 | Best:  293.19 | LR: 1.4e-05 | Ent: 0.0011 | ETA: 2.3m
+Ep 15740 | Steps  4940414 | Reward   319.58 | Avg(100):  283.08 | Best:  293.19 | LR: 1.3e-05 | Ent: 0.0011 | ETA: 2.1m
+Ep 15760 | Steps  4944227 | Reward   271.80 | Avg(100):  285.60 | Best:  293.19 | LR: 1.3e-05 | Ent: 0.0011 | ETA: 2.0m
+Ep 15780 | Steps  4949159 | Reward   243.34 | Avg(100):  285.10 | Best:  293.19 | LR: 1.3e-05 | Ent: 0.0011 | ETA: 1.8m
+Ep 15800 | Steps  4953045 | Reward   280.14 | Avg(100):  285.54 | Best:  293.19 | LR: 1.3e-05 | Ent: 0.0011 | ETA: 1.7m
+  [Greedy eval] 276.54 over 20 eps  (train avg: 284.22 | LR: 1.3e-05 | Ent: 0.0011)
+Ep 15820 | Steps  4957209 | Reward   289.11 | Avg(100):  283.99 | Best:  293.19 | LR: 1.3e-05 | Ent: 0.0011 | ETA: 1.5m
+Ep 15840 | Steps  4962898 | Reward   264.51 | Avg(100):  281.65 | Best:  293.19 | LR: 1.3e-05 | Ent: 0.0011 | ETA: 1.3m
+Ep 15860 | Steps  4967175 | Reward   270.47 | Avg(100):  282.00 | Best:  293.19 | LR: 1.2e-05 | Ent: 0.0011 | ETA: 1.2m
+Ep 15880 | Steps  4970720 | Reward   259.29 | Avg(100):  281.90 | Best:  293.19 | LR: 1.2e-05 | Ent: 0.0011 | ETA: 1.0m
+Ep 15900 | Steps  4975062 | Reward   275.81 | Avg(100):  282.30 | Best:  293.19 | LR: 1.2e-05 | Ent: 0.0010 | ETA: 0.9m
+Ep 15920 | Steps  4979283 | Reward   302.01 | Avg(100):  283.61 | Best:  293.19 | LR: 1.2e-05 | Ent: 0.0010 | ETA: 0.7m
+Ep 15940 | Steps  4983650 | Reward   292.44 | Avg(100):  284.79 | Best:  293.19 | LR: 1.1e-05 | Ent: 0.0010 | ETA: 0.6m
+Ep 15960 | Steps  4987822 | Reward   283.06 | Avg(100):  284.28 | Best:  293.19 | LR: 1.1e-05 | Ent: 0.0010 | ETA: 0.4m
+Ep 15980 | Steps  4992589 | Reward   279.09 | Avg(100):  285.62 | Best:  293.19 | LR: 1.1e-05 | Ent: 0.0010 | ETA: 0.3m
+  [Greedy eval] 274.44 over 20 eps  (train avg: 286.21 | LR: 1.1e-05 | Ent: 0.0010)
+Ep 16000 | Steps  4997653 | Reward   313.81 | Avg(100):  286.60 | Best:  293.19 | LR: 1.0e-05 | Ent: 0.0010 | ETA: 0.1m
+Ep 16020 | Steps  5002243 | Reward   256.32 | Avg(100):  285.79 | Best:  293.19 | LR: 1.0e-05 | Ent: 0.0010 | ETA: -0.1m
+
+Training complete.
+Best greedy avg = 293.19
+Best actor saved → policy_v3.npy
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 283.91
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 285.74
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 283.45
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 284.10
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 283.54
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 283.93
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 288.94
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 287.74
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 284.94
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 288.44
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 289.39
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 289.56
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 289.28
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 289.46
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 285.60
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 285.78
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 281.87
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 286.89
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 287.51
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2> python evaluate_agent.py --filename policy_v3.npy --policy_module my_policy
+Average reward over 100 episodes: 290.39
+PS C:\Users\vankk\OneDrive\Desktop\CS236 Project_2>
+
